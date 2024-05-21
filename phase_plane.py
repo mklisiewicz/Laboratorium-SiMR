@@ -2,14 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Get user inputs for a, b
-a = 0
-b = -2
+a = 1
+b = 3
 
 # Calculate delta
 delta = a**2 - 4*b
 
 # Get user inputs for initial conditions x(0) and x'(0)
-Y0 = [5, 2]
+Y0 = [5, 5]
 
 # Define x range
 x = np.linspace(-20, 20, 1000)
@@ -26,12 +26,16 @@ if a == 0 and b > 0 and delta < 0:
 elif a != 0 and delta < 0:
     # Case 2: r_{1, 2}= -1/2a+-i omega
     omega = np.sqrt(-delta)
-    r1, r2 = -1/(2*a) + 1j*omega, -1/(2*a) - 1j*omega
+    r1 = -1/(2*a) + 1j*omega
+    r2 = -1/(2*a) - 1j*omega
     # Define t range
-    t = np.linspace(0, 10, 1000)
+    t = np.linspace(0, 50, 5000)
+    # Solve for C1 and C2 using the initial conditions
+    C1 = Y0[0]
+    C2 = (Y0[1] - np.real(r1)*C1) / -np.imag(r1)
     # Solve for x and x' using the roots r1 and r2
-    x = np.exp(np.real(r1)*t) * (Y0[0]*np.cos(np.imag(r1)*t) - Y0[1]*np.sin(np.imag(r1)*t))
-    xp = np.real(r1) * x + np.exp(np.real(r1)*t) * (Y0[0]*np.sin(np.imag(r1)*t) + Y0[1]*np.cos(np.imag(r1)*t))
+    x = np.exp(np.real(r1)*t) * (C1*np.cos(np.imag(r1)*t) + C2*np.sin(np.imag(r1)*t))
+    xp = np.real(r1) * x + np.exp(np.real(r1)*t) * (C1*np.sin(np.imag(r1)*t) + C2*np.cos(np.imag(r1)*t))
     plt.plot(x, xp)
 elif a != 0 and delta >= 0:
     # Case 3: r_{1, 2}= -1/2a+-omega
@@ -41,17 +45,13 @@ elif a != 0 and delta >= 0:
     xp = r1*x + r2*x
     plt.plot(x, xp)
 elif a == 0 and b < 0:
-    x = np.linspace(-9, 9, 400)
     c = -b*Y0[0]**2 - Y0[1]**2
-    values = -b*x**2 - c
-    pos = values >= 0
-    neg = values < 0
-    v_pos = np.sqrt(values[pos])
-    v_neg = np.sqrt(-values[neg])
-    plt.plot(x[pos], v_pos, 'r')
-    #plt.plot(x[neg], v_neg, 'r')
+    v = np.sqrt(-b*x**2 - c)
+    plt.plot(x, v, 'r')
+    plt.plot(x, -v, 'r')
 
-
+plt.axhline(0, color='black',linewidth=1)
+plt.axvline(0, color='black',linewidth=1)
 plt.xlabel('x')
 plt.ylabel("v")
 plt.title("Phase plane plot of v(x)")

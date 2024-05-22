@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d474a134339bac2ca3da.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "LaboratoriumSiMR",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "LaboratoriumSiMR::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LaboratoriumSiMR-Debug-654d5a8e489dc59766f2.json",
+					"name" : "LaboratoriumSiMR",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LaboratoriumSiMR_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LaboratoriumSiMR_autogen-Debug-8330c54239ca515e0371.json",
+					"name" : "LaboratoriumSiMR_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LaboratoriumSiMR_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LaboratoriumSiMR_autogen_timestamp_deps-Debug-23f426c6ba2d8e7080c9.json",
+					"name" : "LaboratoriumSiMR_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/mmate/Szko\u0142a/Laboratorium-SiMR/build-LaboratoriumSiMR-Desktop_x86_windows_msvc2022_pe_64bit-Debug",
+		"source" : "C:/Users/mmate/Szko\u0142a/Laboratorium-SiMR/LaboratoriumSiMR"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,30 +1,134 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import integrate
+from mpl_toolkits import mplot3d
+from matplotlib.animation import FFMpegWriter, PillowWriter
+from matplotlib import cm
+from concurrent.futures import ProcessPoolExecutor
 
-def modelEquation(ic, t):
-    x, v = ic
-    a = 0
-    b = -1
-    res = [v, a*v-b*x]
-    return res
 
-x_0 = 20
-y_0 = -10
+plt.rcParams['text.usetex'] = True
+fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))
 
-Y0 = [x_0, y_0]
 
-t = np.linspace(0, 20, 1000)
-solution = integrate.odeint(modelEquation, Y0, t)
-x = solution[:, 0]
-v = solution[:, 1]
-plt.plot(x, v)
-plt.axhline(0, color='black',linewidth=1)
-plt.axvline(0, color='black',linewidth=1)
-plt.xlabel('x')
-plt.ylabel("v")
-plt.title("Phase plane plot of v(x)")
-plt.grid(True)
-#plt.xlim(-20, 20)
-#plt.ylim(-20, 20)
+def plotPhasePlane(a, b):
+    def solution1D(ic, t):
+        x, v = ic
+        res = [v, -a*v-b*x]
+        return res
+
+    def energy(x, v): 
+        return (b*x**2+v**2)/2
+
+    x_0 = 25
+    v_0 = 0
+
+    Y0 = [x_0, v_0]
+    E_0 = energy(x_0, v_0)
+
+    t = np.linspace(0, 10, 2000)
+    solution = integrate.odeint(solution1D, Y0, t)
+    x = solution[:, 0]
+    v = solution[:, 1]
+    E = energy(x, v)
+    
+
+    '''
+    ax.scatter3D(x_0, v_0, E_0, c='red', s=100)
+    
+    fig = plt.figure()
+    ax = plt.axes(projection='3d')
+    ax.scatter3D(x, v, E, c=E, cmap='viridis')
+    ax.set_xlabel('$x$')
+    ax.set_ylabel('$v$')
+    ax.set_zlabel('$\\frac{E}{m}$')
+
+    z_min = 0
+    z_max = np.max(E) *2
+    ax.set_zlim([z_min, z_max])
+    '''
+    return x, v, E, x_0, v_0, E_0
+
+xvec = np.linspace(-15, 15, 1000)
+yvec = np.linspace(-15, 15, 1000)
+
+xlist, ylist = np.meshgrid(xvec, yvec)
+
+writer = FFMpegWriter(fps=15)
+
+a = 0
+def task(b):
+    print(b)
+    energy_surface = (b*xlist**2+ylist**2)/2
+    delta = a**2 - 4*b
+    x, v, E, x_0, v_0, E_0 = plotPhasePlane(a, b)
+    ax.set_xlabel('$x$')
+    ax.set_ylabel('$v$')
+    ax.set_zlabel('$\\frac{E}{m}$')
+    ax.text2D(0.05, 0.95, f"$2h = {a}$", transform=ax.transAxes)
+    ax.text2D(0.05, 0.85, f"$\omega_0^2 = {b}$", transform=ax.transAxes)
+    ax.text2D(0.05, 0.75, f"$\Delta = {delta}$", transform=ax.transAxes)
+    ax.text2D(0.05, 0.65, f"$x_0 = {x_0}$", transform=ax.transAxes)
+    ax.text2D(0.05, 0.55, f"$v_0 = {v_0}$", transform=ax.transAxes)
+
+    z_min = 0
+    z_max = E.max() * 2
+    ax.set_xlim([-300, 300])
+    ax.set_ylim([-300, 300])
+    ax.set_zlim([z_min, E.max() * 2])
+    ax.scatter(x_0, v_0, E_0, c='red', s=100, zorder=10)
+    ax.scatter(x,v,E, c=E, cmap='viridis')
+    ax.plot_surface(xlist,ylist, energy_surface, alpha=0.35, cmap=cm.viridis)
+    
+    plt.cla()
+if __name__ == '__main__':
+    with writer.saving(fig, "phase_plane.mp4", 100):
+        
+        with ProcessPoolExecutor(8) as exe:
+            exe.map(task, np.linspace(-5, 5, 100))
+            writer.grab_frame()
+'''
+def plotPhaseSpace(initial_conditions):
+    def x_solution1D(initial_conditions, t, B, res):
+        v, x, y, z = initial_conditions
+        l = 5
+
+        res[0] = v
+        res[1] = B[0]*(2*l*(x/np.sqrt(x**2+(z+l)**2+y**2)+x/np.sqrt(x**2+(z-l)**2+y**2))-2*x)
+        return res
+    
+    def y_solution1D(initial_conditions, t, B, res):
+        v, x, y, z = initial_conditions
+        l = 5
+
+        res[0] = v
+        res[2] = B[1]*(2*l*(y/np.sqrt(y**2+(z+l)**2+x**2)+y/np.sqrt(y**2+(z-l)**2+x**2))-2*y)
+        return res
+    
+    def z_solution1D(initial_conditions, t, B, res):
+        v, x, y, z = initial_conditions
+        l = 5
+
+        res[0] = v
+        res[3] = B[2]*(2*l*((z+l)/np.sqrt((z+l)**2+y**2+x**2)+(z-l)/np.sqrt((z-l)**2+y**2+x**2))-2*z)
+        return res
+    B = [1, 1, 1]
+
+    t = np.linspace(0, 20, 1000)
+    x_solution = integrate.odeint(x_solution1D, initial_conditions, t, args=(B, 0))
+    y_solution = integrate.odeint(y_solution1D, initial_conditions, t, args=(B, 1))
+    z_solution = integrate.odeint(z_solution1D, initial_conditions, t, args=(B, 2))
+
+    fig = plt.figure()
+    ax = plt.axes(projection='3d')
+    ax.plot3D(x_solution[:, 1], y_solution[:, 2], z_solution[:, 3], 50, cmap='binary')
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_zlabel('z')
+ic = [0, 0, 0, 0]
+plotPhaseSpace(ic)
 plt.show()
+'''
+
+
+

@@ -11,7 +11,7 @@ plt.rcParams['text.usetex'] = True
 fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))
 
 
-def plotPhasePlane(a, b):
+def solvePhaseTrajectory(a, b):
     def solution1D(ic, t):
         x, v = ic
         res = [v, -a*v-b*x]
@@ -20,8 +20,8 @@ def plotPhasePlane(a, b):
     def energy(x, v): 
         return (b*x**2+v**2)/2
 
-    x_0 = 25
-    v_0 = 0
+    x_0 = 5
+    v_0 = 2
 
     Y0 = [x_0, v_0]
     E_0 = energy(x_0, v_0)
@@ -31,22 +31,7 @@ def plotPhasePlane(a, b):
     x = solution[:, 0]
     v = solution[:, 1]
     E = energy(x, v)
-    
-
-    '''
-    ax.scatter3D(x_0, v_0, E_0, c='red', s=100)
-    
-    fig = plt.figure()
-    ax = plt.axes(projection='3d')
-    ax.scatter3D(x, v, E, c=E, cmap='viridis')
-    ax.set_xlabel('$x$')
-    ax.set_ylabel('$v$')
-    ax.set_zlabel('$\\frac{E}{m}$')
-
-    z_min = 0
-    z_max = np.max(E) *2
-    ax.set_zlim([z_min, z_max])
-    '''
+   
     return x, v, E, x_0, v_0, E_0
 
 xvec = np.linspace(-15, 15, 1000)
@@ -56,12 +41,10 @@ xlist, ylist = np.meshgrid(xvec, yvec)
 
 writer = FFMpegWriter(fps=15)
 
-a = 0
-def task(b):
-    print(b)
+def plotPhaseTrajectory(a, b):
     energy_surface = (b*xlist**2+ylist**2)/2
     delta = a**2 - 4*b
-    x, v, E, x_0, v_0, E_0 = plotPhasePlane(a, b)
+    x, v, E, x_0, v_0, E_0 = solvePhaseTrajectory(a, b)
     ax.set_xlabel('$x$')
     ax.set_ylabel('$v$')
     ax.set_zlabel('$\\frac{E}{m}$')
@@ -73,20 +56,16 @@ def task(b):
 
     z_min = 0
     z_max = E.max() * 2
-    ax.set_xlim([-300, 300])
-    ax.set_ylim([-300, 300])
+    ax.set_xlim([-30, 30])
+    ax.set_ylim([-30, 30])
     ax.set_zlim([z_min, E.max() * 2])
-    ax.scatter(x_0, v_0, E_0, c='red', s=100, zorder=10)
-    ax.scatter(x,v,E, c=E, cmap='viridis')
-    ax.plot_surface(xlist,ylist, energy_surface, alpha=0.35, cmap=cm.viridis)
-    
-    plt.cla()
+    ax.scatter(x_0, v_0, E_0, c='red', s=100, zorder=1)
+    ax.scatter(x,v,E, c=E, cmap='viridis', zorder=2)
+    ax.plot_surface(xlist,ylist, energy_surface, alpha=0.35, cmap=cm.viridis, zorder=3) 
+    plt.show()
+
 if __name__ == '__main__':
-    with writer.saving(fig, "phase_plane.mp4", 100):
-        
-        with ProcessPoolExecutor(8) as exe:
-            exe.map(task, np.linspace(-5, 5, 100))
-            writer.grab_frame()
+    plotPhaseTrajectory(5, 20)
 '''
 def plotPhaseSpace(initial_conditions):
     def x_solution1D(initial_conditions, t, B, res):
@@ -129,11 +108,5 @@ ic = [0, 0, 0, 0]
 plotPhaseSpace(ic)
 plt.show()
 '''
-
-
-
-
-'''
-
 
 

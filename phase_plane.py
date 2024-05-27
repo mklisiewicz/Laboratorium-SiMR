@@ -39,7 +39,7 @@ yvec = np.linspace(-15, 15, 1000)
 
 xlist, ylist = np.meshgrid(xvec, yvec)
 
-writer = FFMpegWriter(fps=15)
+# writer = FFMpegWriter(fps=15)
 
 def plotPhaseTrajectory(a, b):
     energy_surface = (b*xlist**2+ylist**2)/2
@@ -62,51 +62,13 @@ def plotPhaseTrajectory(a, b):
     ax.scatter(x_0, v_0, E_0, c='red', s=100, zorder=1)
     ax.scatter(x,v,E, c=E, cmap='viridis', zorder=2)
     ax.plot_surface(xlist,ylist, energy_surface, alpha=0.35, cmap=cm.viridis, zorder=3) 
-    plt.show()
+    plt.savefig(f"./plots/phase_plane_{a}_{b}.png")
 
 if __name__ == '__main__':
-    plotPhaseTrajectory(5, 20)
-'''
-def plotPhaseSpace(initial_conditions):
-    def x_solution1D(initial_conditions, t, B, res):
-        v, x, y, z = initial_conditions
-        l = 5
+    import sys
+    a = float(sys.argv[1])
+    b = float(sys.argv[2])
+    plotPhaseTrajectory(a, b)
 
-        res[0] = v
-        res[1] = B[0]*(2*l*(x/np.sqrt(x**2+(z+l)**2+y**2)+x/np.sqrt(x**2+(z-l)**2+y**2))-2*x)
-        return res
-    
-    def y_solution1D(initial_conditions, t, B, res):
-        v, x, y, z = initial_conditions
-        l = 5
-
-        res[0] = v
-        res[2] = B[1]*(2*l*(y/np.sqrt(y**2+(z+l)**2+x**2)+y/np.sqrt(y**2+(z-l)**2+x**2))-2*y)
-        return res
-    
-    def z_solution1D(initial_conditions, t, B, res):
-        v, x, y, z = initial_conditions
-        l = 5
-
-        res[0] = v
-        res[3] = B[2]*(2*l*((z+l)/np.sqrt((z+l)**2+y**2+x**2)+(z-l)/np.sqrt((z-l)**2+y**2+x**2))-2*z)
-        return res
-    B = [1, 1, 1]
-
-    t = np.linspace(0, 20, 1000)
-    x_solution = integrate.odeint(x_solution1D, initial_conditions, t, args=(B, 0))
-    y_solution = integrate.odeint(y_solution1D, initial_conditions, t, args=(B, 1))
-    z_solution = integrate.odeint(z_solution1D, initial_conditions, t, args=(B, 2))
-
-    fig = plt.figure()
-    ax = plt.axes(projection='3d')
-    ax.plot3D(x_solution[:, 1], y_solution[:, 2], z_solution[:, 3], 50, cmap='binary')
-    ax.set_xlabel('x')
-    ax.set_ylabel('y')
-    ax.set_zlabel('z')
-ic = [0, 0, 0, 0]
-plotPhaseSpace(ic)
-plt.show()
-'''
 
 

@@ -1,35 +1,38 @@
 \documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage[font=normalsize,labelfont=bf]{caption}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+
 \title{Modernizacja Laboratorium Drgań}
 \author{Mateusz Klisiewicz}
-\date{Maj 2024}
-\usepackage{graphicx}
+
+\newcommand{\mytitle}{Modernizacja Laboratorium Drgań}
+\newcommand{\mysubtitle}{Plan Modelowy}
+\date{\today}
+\fancyfoot{}
+\fancyhead[L]{\mytitle}
+\fancyhead[R]{\mysubtitle}
+
+\fancyfoot[C]{\thepage}
+
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+\renewcommand{\figurename}{Rysunek}
+\graphicspath{{./tex_resources/}}
+\title{\mytitle \\
+  \large \mysubtitle}
+
+
 \begin{document}
 \maketitle
-$sqrt((x_1 - cos(γ) cos(β) l_0 - x_0)^2 + (sin(γ) cos(β) l_0 + y_0)^2 + (-sin(β) l_0 + z_0)^2)
-sqrt((x_2 + cos(γ) cos(β) l_0 - x_0)^2 + (-sin(γ) (cos(β) l_0) + y_0)^2 + (sin(β) l_0 + z_0)^2)$
 
-$\sqrt{\left(\cos\left({\beta}\right)\,l_0\sin\left({\gamma}\right)+y_0\right)^2+\left(-\cos\left({\beta}\right)\,l_0\cos\left({\gamma}\right)+x_1-x_0\right)^2+\left(z_0-\sin\left({\beta}\right)\,l_0\right)^2}$
-$\sqrt{\left(y_0-\cos\left({\beta}\right)\,l_0\sin\left({\gamma}\right)\right)^2+\left(\cos\left({\beta}\right)\,l_0\cos\left({\gamma}\right)+x_2-x_0\right)^2+\left(z_0+\sin\left({\beta}\right)\,l_0\right)^2}$
-
-$sqrt((l_0*(cos(alpha)*sin(beta)*sin(gamma)-sin(alpha)*cos(gamma))+y_0)^2+(l_0*(sin(alpha)*sin(gamma)+cos(alpha)*sin(beta)*cos(gamma))+x_0)^2+(z_1-l_0*(cos(alpha)*cos(beta))-z_0)^2)
-sqrt((y_0-l_0*(cos(alpha)*sin(beta)*sin(gamma)-sin(alpha)*cos(gamma)))^2+(x_0-l_0*(sin(alpha)*sin(gamma)+cos(alpha)*sin(beta)*cos(gamma)))^2+(z_2+l_0*(cos(alpha)*cos(beta))-z_0)^2)$
-
-$\sqrt{\left(l_0\cdot\left(\cos\left({\alpha}\right)\sin\left({\beta}\right)\sin\left({\gamma}\right)-\sin\left({\alpha}\right)\cos\left({\gamma}\right)\right)+y_0\right)^2+\left(l_0\cdot\left(\sin\left({\alpha}\right)\sin\left({\gamma}\right)+\cos\left({\alpha}\right)\sin\left({\beta}\right)\cos\left({\gamma}\right)\right)+x_0\right)^2+\left(z_1-z_0-\cos\left({\alpha}\right)\cos\left({\beta}\right)\,l_0\right)^2}$
-$\sqrt{\left(y_0-l_0\cdot\left(\cos\left({\alpha}\right)\sin\left({\beta}\right)\sin\left({\gamma}\right)-\sin\left({\alpha}\right)\cos\left({\gamma}\right)\right)\right)^2+\left(x_0-l_0\cdot\left(\sin\left({\alpha}\right)\sin\left({\gamma}\right)+\cos\left({\alpha}\right)\sin\left({\beta}\right)\cos\left({\gamma}\right)\right)\right)^2+\left(l_0\cdot\left(z_1+\cos\left({\alpha}\right)\cos\left({\beta}\right)\right)-z_0\right)^2}$
-
-$(d_0-sqrt((cos(beta)*l_0*sin(gamma)+y_0)^2+(-cos(beta)*l_0*cos(gamma)+x_1-x_0)^2+(z_0-sin(beta)*l_0)^2))^2
-(d_0-sqrt((y_0-cos(beta)*l_0*sin(gamma))^2+(cos(beta)*l_0*cos(gamma)+x_2-x_0)^2+(z_0+sin(beta)*l_0)^2))^2
-
-(d_0-sqrt((l_0*(cos(alpha)*sin(beta)*sin(gamma)-sin(alpha)*cos(gamma))+y_0)^2+(l_0*(sin(alpha)*sin(gamma)+cos(alpha)*sin(beta)*cos(gamma))+x_0)^2+(z_1-l_0*(cos(alpha)*cos(beta))-z_0)^2))^2
-(d_0-sqrt((y_0-l_0*(cos(alpha)*sin(beta)*sin(gamma)-sin(alpha)*cos(gamma)))^2+(x_0-l_0*(sin(alpha)*sin(gamma)+cos(alpha)*sin(beta)*cos(gamma)))^2+(z_2+l_0*(cos(alpha)*cos(beta))-z_0)^2))^2
-
-alpha
-(k*((sqrt((l_0*(sin(gamma)*sin(alpha)+sin(beta)*cos(gamma)*cos(alpha))-x_0)^2+(l_0*(cos(gamma)*sin(alpha)-sin(beta)*sin(gamma)*cos(alpha))+y_0)^2+(cos(beta)*l_0*cos(alpha)+z_2-z_0)^2)-d_0)^2*(sqrt((l_0*(sin(gamma)*sin(alpha)+sin(beta)*cos(gamma)*cos(alpha))+x_0)^2+(l_0*(cos(gamma)*sin(alpha)-sin(beta)*sin(gamma)*cos(alpha))-y_0)^2+(cos(beta)*l_0*cos(alpha)-z_1+z_0)^2)-d_0)^2+(sqrt((cos(beta)*l_0*sin(gamma)+y_0)^2+(cos(beta)*l_0*cos(gamma)-x_1+x_0)^2+(z_0-sin(beta)*l_0)^2)-d_0)^2+(sqrt((cos(beta)*l_0*sin(gamma)-y_0)^2+(cos(beta)*l_0*cos(gamma)+x_2-x_0)^2+(z_0+sin(beta)*l_0)^2)-d_0)^2))/2
-
-beta
-(k*((sqrt((l_0*(cos(alpha)*sin(gamma)*sin(beta)-sin(alpha)*cos(gamma))-y_0)^2+(l_0*(cos(alpha)*cos(gamma)*sin(beta)+sin(alpha)*sin(gamma))-x_0)^2+(cos(alpha)*l_0*cos(beta)+z_2-z_0)^2)-d_0)^2*(sqrt((l_0*(cos(alpha)*sin(gamma)*sin(beta)-sin(alpha)*cos(gamma))+y_0)^2+(l_0*(cos(alpha)*cos(gamma)*sin(beta)+sin(alpha)*sin(gamma))+x_0)^2+(cos(alpha)*l_0*cos(beta)-z_1+z_0)^2)-d_0)^2+(sqrt((l_0*sin(beta)+z_0)^2+(l_0*sin(gamma)*cos(beta)-y_0)^2+(l_0*cos(gamma)*cos(beta)+x_2-x_0)^2)-d_0)^2+(sqrt((l_0*sin(beta)-z_0)^2+(l_0*sin(gamma)*cos(beta)+y_0)^2+(l_0*cos(gamma)*cos(beta)-x_1+x_0)^2)-d_0)^2))/2
-
-gamma
-(k*((sqrt((l_0*(cos(alpha)*sin(beta)*sin(gamma)-sin(alpha)*cos(gamma))-y_0)^2+(l_0*(sin(alpha)*sin(gamma)+cos(alpha)*sin(beta)*cos(gamma))-x_0)^2+(z_2-z_0+cos(alpha)*cos(beta)*l_0)^2)-d_0)^2*(sqrt((l_0*(cos(alpha)*sin(beta)*sin(gamma)-sin(alpha)*cos(gamma))+y_0)^2+(l_0*(sin(alpha)*sin(gamma)+cos(alpha)*sin(beta)*cos(gamma))+x_0)^2+(z_1-z_0-cos(alpha)*cos(beta)*l_0)^2)-d_0)^2+(sqrt((cos(beta)*l_0*sin(gamma)+y_0)^2+(cos(beta)*l_0*cos(gamma)-x_1+x_0)^2+(z_0-sin(beta)*l_0)^2)-d_0)^2+(sqrt((cos(beta)*l_0*sin(gamma)-y_0)^2+(cos(beta)*l_0*cos(gamma)+x_2-x_0)^2+(z_0+sin(beta)*l_0)^2)-d_0)^2))/2
-$
 \end{document}

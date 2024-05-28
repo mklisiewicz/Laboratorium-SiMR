@@ -1,0 +1,11 @@
+-IC:/cpp_libs/gnuplot-iostream
+-IC:/cpp_libs/boost_1_85_0
+-IC:/cpp_libs/vcpkg/buildtrees/eigen3/x64-windows-rel
+-I/installed/x64-windows/include/eigen3
+-IC:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.h
+-IC:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.cpp
+-IC:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.ui
+-IC:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.h
+-IC:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.cpp
+-IC:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/main.cpp
+C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI

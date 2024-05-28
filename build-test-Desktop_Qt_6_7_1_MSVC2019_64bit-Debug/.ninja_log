@@ -1,0 +1,9 @@
+# ninja log v6
+7	214	7386107123619088	test_autogen/timestamp	e3ded48bfe25ab76
+7	214	7386107123619088	test_autogen/mocs_compilation.cpp	e3ded48bfe25ab76
+7	214	7386107123619088	C:/Users/mmate/SiMR/Laboratorium-SiMR/build-test-Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/test_autogen/timestamp	e3ded48bfe25ab76
+7	214	7386107123619088	C:/Users/mmate/SiMR/Laboratorium-SiMR/build-test-Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/test_autogen/mocs_compilation.cpp	e3ded48bfe25ab76
+214	1157	7386107124021998	CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.obj	596b56df3297a51e
+220	1162	7386107124082030	CMakeFiles/test.dir/mainwindow.cpp.obj	bfd8a3e518a229d1
+217	1166	7386107124052030	CMakeFiles/test.dir/main.cpp.obj	383c0a5e87aaae2d
+1166	1366	7386107133550430	test.exe	75f760c8bec35174

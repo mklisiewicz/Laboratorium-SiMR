@@ -1,0 +1,9 @@
+# ninja log v6
+5	176	7386079610369255	test_autogen/timestamp	cf216c3925dc650
+5	176	7386079610369255	test_autogen/mocs_compilation.cpp	cf216c3925dc650
+5	176	7386079610369255	C:/Users/mmate/SiMR/Laboratorium-SiMR/build-test-Desktop_x86_windows_msvc2022_pe_64bit-Debug/test_autogen/timestamp	cf216c3925dc650
+5	176	7386079610369255	C:/Users/mmate/SiMR/Laboratorium-SiMR/build-test-Desktop_x86_windows_msvc2022_pe_64bit-Debug/test_autogen/mocs_compilation.cpp	cf216c3925dc650
+179	1117	7386079610714589	CMakeFiles/test.dir/main.cpp.obj	f2ffe9d12cb9076c
+177	1119	7386079610694608	CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.obj	76612ba99f0752d5
+181	1120	7386079610737785	CMakeFiles/test.dir/mainwindow.cpp.obj	4f393aceb7025ad5
+1120	1340	7386079620124370	test.exe	83fd93401df5530b

@@ -1,0 +1,12 @@
+# ninja log v5
+433	1546	7384435246823595	CMakeFiles/LabGUI.dir/main.cpp.obj	6719d14431e19242
+33	371	7384446875028735	C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build-LabGUI-Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/LabGUI_autogen/timestamp	82e2217768e9df94
+11	23	0	C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build-LabGUI-Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/cmake.verify_globs	6c074cbdcc6f5b8
+33	371	7384446875028735	C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build-LabGUI-Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/LabGUI_autogen/mocs_compilation.cpp	82e2217768e9df94
+19	535	7384446871127256	build.ninja	9f833f978246584
+33	371	7384446875028735	LabGUI_autogen/timestamp	82e2217768e9df94
+33	371	7384446875028735	LabGUI_autogen/mocs_compilation.cpp	82e2217768e9df94
+427	1511	7384441398399145	CMakeFiles/LabGUI.dir/LabGUI_autogen/mocs_compilation.cpp.obj	137808dbbe00123d
+435	1559	7384435246958701	CMakeFiles/LabGUI.dir/mainwindow.cpp.obj	53cfaae246207b0
+1213	1390	7384435546378389	LabGUI.exe	d57f237e4b5ad480
+433	1522	7384441398519141	CMakeFiles/LabGUI.dir/interface.cpp.obj	71496e9dab1513b7

@@ -852,6 +852,7 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QLineEdit \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QPushButton \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QScrollerProperties \
+  C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QSlider \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QWidget \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QtWidgets \

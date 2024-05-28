@@ -1313,15 +1313,15 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "LabGUI_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "LabGUI_autogen::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 164,
 			"id" : "LabGUI_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 0,
-			"id" : "LabGUI_autogen::@6890427a1f51a3e7e1df"
+			"id" : "LabGUI_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "LabGUI::@6890427a1f51a3e7e1df",

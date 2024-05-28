@@ -7,12 +7,29 @@ interface::interface(QWidget *parent) : QWidget(parent) {
 void interface::setupUI() {
     imageFrame = new QFrame(this);
     imageFrame->setFrameShape(QFrame::StyledPanel);
+    imageFrame->setMinimumSize(1000, 500);
 
-    imageLabel = new QLabel(imageFrame);
-    imageLabel->setAlignment(Qt::AlignCenter);
-    imageLabel->setText("Image will be displayed here");
+    parameterSliderA = new QSlider(Qt::Horizontal);
+    parameterSliderA->setRange(-10, 10);  // Set the range of the slider as needed
+    QTimer *debounceTimerA = new QTimer(this);
+    debounceTimerA->setSingleShot(true);
+    connect(debounceTimerA, &QTimer::timeout, this, [this]() {
+        updateScatterDataA(parameterSliderA->value());
+    });
+    connect(parameterSliderA, &QSlider::valueChanged, this, &interface::updateScatterDataA);
+    
+    parameterSliderB = new QSlider(Qt::Horizontal);
+    parameterSliderB->setRange(-10, 10);  // Set the range of the slider as needed
+    QTimer *debounceTimerB = new QTimer(this);
+    debounceTimerB->setSingleShot(true);
+    connect(debounceTimerB, &QTimer::timeout, this, [this]() {
+        updateScatterDataB(parameterSliderB->value());
+    });
+    connect(parameterSliderB, &QSlider::valueChanged, this, &interface::updateScatterDataB);
 
-
+    frameLayout = new QVBoxLayout(imageFrame);
+    
+    
     parameterLineEdit1 = new QLineEdit(this);
     parameterLineEdit2 = new QLineEdit(this);
 
@@ -20,15 +37,17 @@ void interface::setupUI() {
     runButton = new QPushButton("Run", this);
     connect(runButton, &QPushButton::clicked, this, &interface::runPythonScript);
 
-
-    QVBoxLayout *frameLayout = new QVBoxLayout(imageFrame);
-    frameLayout->addWidget(imageLabel);
     imageFrame->setLayout(frameLayout);
+
+    setUpScatter();
 
     QHBoxLayout *comboBoxLayout = new QHBoxLayout;
     comboBoxLayout->addWidget(parameterLineEdit1);
     comboBoxLayout->addWidget(parameterLineEdit2);
+    comboBoxLayout->addWidget(parameterSliderA);
+    comboBoxLayout->addWidget(parameterSliderB);
     comboBoxLayout->addWidget(runButton);
+
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(imageFrame);
@@ -64,16 +83,35 @@ std::vector<std::vector<double>> interface::plotPhaseTrajectory(double a, double
     return x_vec;
 }
 
-void interface::create3DPlot(const std::vector<std::vector<double>>& x_vec, double b) {
-    Q3DScatter* scatter = new Q3DScatter();
+void interface::setUpScatter(){
+    scatter = new Q3DScatter();
     scatter->setMinimumSize(QSize(1000, 1000));
     scatter->setAspectRatio(1.0);
+    
     scatter->setOptimizationHints(QAbstract3DGraph::OptimizationStatic);
     Q3DTheme *theme = scatter->activeTheme();
     theme->setBackgroundEnabled(false);
     theme->setLabelBackgroundEnabled(false);
     scatter->setShadowQuality(QAbstract3DGraph::ShadowQualityNone); // Disable shadows
+    
+    scatter->axisX()->setAutoAdjustRange(true);
+    scatter->axisY()->setAutoAdjustRange(true);
+    scatter->axisZ()->setAutoAdjustRange(true);
+    scatter->axisX()->setTitle("x");
+    scatter->axisZ()->setTitle("v");
+    scatter->axisY()->setTitle("E/m");
+    scatter->axisX()->setTitleVisible(true);
+    scatter->axisZ()->setTitleVisible(true);
+    scatter->axisY()->setTitleVisible(true);
 
+    QWidget *container = QWidget::createWindowContainer(scatter);
+
+    frameLayout->addWidget(container);
+}
+
+void interface::create3DPlot(const std::vector<std::vector<double>>& x_vec, double b) {
+    
+    
     while (scatter->seriesList().count() > 0) {
         scatter->removeSeries(scatter->seriesList().first());
     }
@@ -96,30 +134,25 @@ void interface::create3DPlot(const std::vector<std::vector<double>>& x_vec, doub
 
     series->dataProxy()->resetArray(data);
 
-    scatter->axisX()->setTitle("x");
-    scatter->axisZ()->setTitle("v");
-    scatter->axisY()->setTitle("E/m");
-    scatter->axisX()->setTitleVisible(true);
-    scatter->axisZ()->setTitleVisible(true);
-    scatter->axisY()->setTitleVisible(true);
+    
+}
 
-    QWidget *container = QWidget::createWindowContainer(scatter);
+void interface::updateScatterDataA(int value) {
+    // Convert the slider value to the parameter value as needed
+    double a = static_cast<double>(value) / 10.0;
+    double b = static_cast<double>(parameterSliderB->value());
+    // Update the scatter data
+    std::vector<std::vector<double>> x_vec = plotPhaseTrajectory(a, b);
+    create3DPlot(x_vec, b);
+}
 
-    // Clear previous widgets in imageFrame layout
-    QLayout *frameLayout = imageFrame->layout();
-    if (frameLayout) {
-        while (QLayoutItem* item = frameLayout->takeAt(0)) {
-            if (item->widget()) {
-                item->widget()->deleteLater();
-            }
-            delete item;
-        }
-    } else {
-        frameLayout = new QVBoxLayout(imageFrame);
-        imageFrame->setLayout(frameLayout);
-    }
-
-    frameLayout->addWidget(container);
+void interface::updateScatterDataB(int value) {
+    // Convert the slider value to the parameter value as needed
+    double a = static_cast<double>(parameterSliderB->value());
+    double b = static_cast<double>(value) / 10.0;
+    // Update the scatter data
+    std::vector<std::vector<double>> x_vec = plotPhaseTrajectory(a, b);
+    create3DPlot(x_vec, b);
 }
 
 void interface::runPythonScript() {

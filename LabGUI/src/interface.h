@@ -25,6 +25,7 @@
 #include <QtGraphs>
 #include <QtCharts>
 #include <Q3DTheme>
+#include <QSlider>
 
 
 class interface : public QWidget {
@@ -39,12 +40,18 @@ private:
     QLineEdit *parameterLineEdit2;
     QLineEdit *parameterLineEdit1;
     QPushButton *runButton;
-
+    Q3DScatter *scatter;
+    QVBoxLayout *frameLayout;
+    QSlider *parameterSliderA;
+    QSlider *parameterSliderB;
+    
     void setupUI();
+    void setUpScatter();
     double energy(double x, double v, double b);
     std::vector<std::vector<double>> plotPhaseTrajectory(double a, double b);
     void create3DPlot(const std::vector<std::vector<double>>& x_vec, double b);
-    
+    void updateScatterDataA(int value);
+    void updateScatterDataB(int value);
     struct System {
     double a, b;
 

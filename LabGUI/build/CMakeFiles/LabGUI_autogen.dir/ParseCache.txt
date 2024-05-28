@@ -854,6 +854,7 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.h
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QLineEdit
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QPushButton
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QScrollerProperties
+ mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QSlider
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QVBoxLayout
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QtWidgets
@@ -3457,6 +3458,7 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.h
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QMenuBar
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QPushButton
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QScrollerProperties
+ mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QSlider
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QVBoxLayout
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QtWidgets
@@ -5202,6 +5204,6 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.h
  mdp:C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  mdp:C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/MatrixCwiseUnaryOps.h
  mdp:C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/ReshapedMethods.h
-C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.cpp
 C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/main.cpp
+C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.cpp
 C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.cpp

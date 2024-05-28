@@ -20,8 +20,8 @@ def solvePhaseTrajectory(a, b):
     def energy(x, v): 
         return (b*x**2+v**2)/2
 
-    x_0 = 5
-    v_0 = 2
+    x_0 = 15
+    v_0 = 0
 
     Y0 = [x_0, v_0]
     E_0 = energy(x_0, v_0)
@@ -62,12 +62,15 @@ def plotPhaseTrajectory(a, b):
     ax.scatter(x_0, v_0, E_0, c='red', s=100, zorder=1)
     ax.scatter(x,v,E, c=E, cmap='viridis', zorder=2)
     ax.plot_surface(xlist,ylist, energy_surface, alpha=0.35, cmap=cm.viridis, zorder=3) 
-    plt.savefig(f"./plots/phase_plane_{a}_{b}.png")
+    # plt.savefig(f"./plots/phase_plane_{a}_{b}.png")
+    plt.show()
 
 if __name__ == '__main__':
-    import sys
-    a = float(sys.argv[1])
-    b = float(sys.argv[2])
+    # import sys
+    # a = float(sys.argv[1])
+    # b = float(sys.argv[2])
+    a=0.5
+    b=3
     plotPhaseTrajectory(a, b)
 
 

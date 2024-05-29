@@ -26,6 +26,8 @@
 #include <QtCharts>
 #include <Q3DTheme>
 #include <QSlider>
+#include <QThread>
+#include "glplotwidget.h"
 
 
 class interface : public QWidget {
@@ -37,31 +39,39 @@ public:
 private:
     QFrame *imageFrame;
     QLabel *imageLabel;
-    QLineEdit *parameterLineEdit2;
-    QLineEdit *parameterLineEdit1;
     QPushButton *runButton;
-    Q3DScatter *scatter;
     QVBoxLayout *frameLayout;
-    QSlider *parameterSliderA;
-    QSlider *parameterSliderB;
-    
-    void setupUI();
-    void setUpScatter();
-    double energy(double x, double v, double b);
-    std::vector<std::vector<double>> plotPhaseTrajectory(double a, double b);
-    void create3DPlot(const std::vector<std::vector<double>>& x_vec, double b);
-    void updateScatterDataA(int value);
-    void updateScatterDataB(int value);
-    struct System {
-    double a, b;
+    QLabel *dampingSliderLabel;
+    QSlider *dampingSlider;
+    QLabel *stiffnessSliderLabel;
+    QSlider *stiffnessSlider;
+    QLabel *positionSliderLabel;
+    QSlider *positionSlider;
+    QLabel *velocitySliderLabel;
+    QSlider *velocitySlider;
 
-    void operator()(const std::vector<double> &x, std::vector<double> &dxdt, double /* t */) {
-        dxdt[0] = x[1];
-        dxdt[1] = -a * x[1] - b * x[0];
-    }
+    GLPlotWidget *plotWidget;
+    
+    double a, b, x_0, v_0;   
+
+    void setupUI();
+
+
+    double energy(double x, double v, double b);
+    std::vector<std::vector<double>> plotPhaseTrajectory(double a, double b, double x_0, double v_0);
+     struct System {
+        double a, b;
+        void operator()(const std::vector<double> &x, std::vector<double> &dxdt, double /* t */) {
+            dxdt[0] = x[1];
+            dxdt[1] = -a * x[1] - b * x[0];
+        }
     };
+    
 private slots:
-    void runPythonScript();
+    void updateParameters();
+signals:
+    void operate();
+
 };
 
 #endif // INTERFACE_H

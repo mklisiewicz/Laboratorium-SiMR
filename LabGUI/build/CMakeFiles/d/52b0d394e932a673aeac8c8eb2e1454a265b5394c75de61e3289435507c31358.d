@@ -3,12 +3,12 @@ LabGUI_autogen/timestamp: \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeCXXInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake \
-  C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeDependentOption.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeGenericSystem.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeParseArguments.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakePushCheckState.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeRCInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake \
@@ -16,14 +16,19 @@ LabGUI_autogen/timestamp: \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CheckIncludeFileCXX.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/CheckSymbolExists.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Compiler/MSVC-CXX.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Compiler/MSVC.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/FindBZip2.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/FindBoost.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/FindLibLZMA.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/FindOpenGL.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/FindPackageMessage.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/FindVulkan.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/FindZLIB.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/GNUInstallDirs.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Internal/CheckFlagCommonConfig.cmake \
@@ -33,6 +38,7 @@ LabGUI_autogen/timestamp: \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Platform/Windows-MSVC.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Platform/Windows.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/SelectLibraryConfigurations.cmake \
   C:/Qt/6.7.1/msvc2019_64/include/QtCharts/QAbstractAxis \
   C:/Qt/6.7.1/msvc2019_64/include/QtCharts/QAbstractBarSeries \
   C:/Qt/6.7.1/msvc2019_64/include/QtCharts/QAbstractSeries \
@@ -162,11 +168,14 @@ LabGUI_autogen/timestamp: \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QSizeF \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QString \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QStringList \
+  C:/Qt/6.7.1/msvc2019_64/include/QtCore/QThread \
+  C:/Qt/6.7.1/msvc2019_64/include/QtCore/QTimer \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QUrl \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QVariant \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QtCore \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QtCoreDepends \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QtGlobal \
+  C:/Qt/6.7.1/msvc2019_64/include/QtCore/QtMath \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/q20algorithm.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/q20chrono.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/q20functional.h \
@@ -743,6 +752,7 @@ LabGUI_autogen/timestamp: \
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGL/qtopenglexports.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGL/qtopenglglobal.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGL/qtopenglversion.h \
+  C:/Qt/6.7.1/msvc2019_64/include/QtOpenGLWidgets/QOpenGLWidget \
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGLWidgets/qopenglwidget.h \
@@ -1988,6 +1998,8 @@ LabGUI_autogen/timestamp: \
   CMakeFiles/3.27.0-rc4/CMakeCXXCompiler.cmake \
   CMakeFiles/3.27.0-rc4/CMakeRCCompiler.cmake \
   CMakeFiles/3.27.0-rc4/CMakeSystem.cmake \
+  C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.cpp \
+  C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.h \
   C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.cpp \
   C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.h \
   C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/main.cpp \
@@ -3611,10 +3623,139 @@ LabGUI_autogen/timestamp: \
   C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
   C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
   C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/ReshapedMethods.h \
+  C:/cpp_libs/vcpkg/installed/x64-windows/include/GL/gl.h \
   C:/cpp_libs/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake \
   C:/cpp_libs/vcpkg/installed/x64-windows/share/boost/BoostConfigVersion.cmake \
-  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_array/boost_array-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_array/boost_array-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_array/boost_array-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_assert/boost_assert-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_assert/boost_assert-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_assert/boost_assert-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_bind/boost_bind-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_bind/boost_bind-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_bind/boost_bind-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_concept_check/boost_concept_check-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_concept_check/boost_concept_check-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_concept_check/boost_concept_check-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_config/boost_config-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_config/boost_config-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_config/boost_config-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_container_hash/boost_container_hash-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_container_hash/boost_container_hash-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_container_hash/boost_container_hash-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_conversion/boost_conversion-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_conversion/boost_conversion-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_conversion/boost_conversion-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_core/boost_core-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_core/boost_core-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_core/boost_core-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_describe/boost_describe-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_describe/boost_describe-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_describe/boost_describe-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_detail/boost_detail-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_detail/boost_detail-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_detail/boost_detail-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_dynamic_bitset/boost_dynamic_bitset-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_dynamic_bitset/boost_dynamic_bitset-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_dynamic_bitset/boost_dynamic_bitset-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_function/boost_function-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_function/boost_function-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_function/boost_function-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_function_types/boost_function_types-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_function_types/boost_function_types-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_function_types/boost_function_types-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_functional/boost_functional-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_functional/boost_functional-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_functional/boost_functional-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_fusion/boost_fusion-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_fusion/boost_fusion-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_fusion/boost_fusion-targets.cmake \
   C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_headers/boost_headers-config-version.cmake \
   C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_headers/boost_headers-config.cmake \
   C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_headers/boost_headers-targets.cmake \
-  C:/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_integer/boost_integer-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_integer/boost_integer-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_integer/boost_integer-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_io/boost_io-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_io/boost_io-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_io/boost_io-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iostreams/boost_iostreams-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iostreams/boost_iostreams-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iostreams/boost_iostreams-targets-debug.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iostreams/boost_iostreams-targets-release.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iostreams/boost_iostreams-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iterator/boost_iterator-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iterator/boost_iterator-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iterator/boost_iterator-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_move/boost_move-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_move/boost_move-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_move/boost_move-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_mp11/boost_mp11-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_mp11/boost_mp11-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_mp11/boost_mp11-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_mpl/boost_mpl-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_mpl/boost_mpl-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_mpl/boost_mpl-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_numeric_conversion/boost_numeric_conversion-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_numeric_conversion/boost_numeric_conversion-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_numeric_conversion/boost_numeric_conversion-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_optional/boost_optional-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_optional/boost_optional-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_optional/boost_optional-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_predef/boost_predef-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_predef/boost_predef-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_predef/boost_predef-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_preprocessor/boost_preprocessor-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_preprocessor/boost_preprocessor-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_preprocessor/boost_preprocessor-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_random/boost_random-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_random/boost_random-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_random/boost_random-targets-debug.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_random/boost_random-targets-release.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_random/boost_random-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_range/boost_range-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_range/boost_range-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_range/boost_range-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_regex/boost_regex-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_regex/boost_regex-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_regex/boost_regex-targets-debug.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_regex/boost_regex-targets-release.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_regex/boost_regex-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_smart_ptr/boost_smart_ptr-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_smart_ptr/boost_smart_ptr-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_smart_ptr/boost_smart_ptr-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_static_assert/boost_static_assert-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_static_assert/boost_static_assert-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_static_assert/boost_static_assert-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_system/boost_system-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_system/boost_system-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_system/boost_system-targets-debug.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_system/boost_system-targets-release.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_system/boost_system-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_throw_exception/boost_throw_exception-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_throw_exception/boost_throw_exception-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_throw_exception/boost_throw_exception-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_tuple/boost_tuple-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_tuple/boost_tuple-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_tuple/boost_tuple-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_type_traits/boost_type_traits-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_type_traits/boost_type_traits-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_type_traits/boost_type_traits-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_typeof/boost_typeof-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_typeof/boost_typeof-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_typeof/boost_typeof-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_utility/boost_utility-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_utility/boost_utility-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_utility/boost_utility-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_variant2/boost_variant2-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_variant2/boost_variant2-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_variant2/boost_variant2-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_winapi/boost_winapi-config-version.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_winapi/boost_winapi-config.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_winapi/boost_winapi-targets.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/zstd/zstdConfig.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/zstd/zstdConfigVersion.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/zstd/zstdTargets-debug.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/zstd/zstdTargets-release.cmake \
+  C:/cpp_libs/vcpkg/installed/x64-windows/share/zstd/zstdTargets.cmake

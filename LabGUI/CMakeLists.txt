@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 3.5)
-set(CMAKE_PREFIX_PATH "C:/cpp_libs/vcpkg/installed/x64-windows/share;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6")
+set(CMAKE_PREFIX_PATH "C:/cpp_libs/vcpkg/installed/x64-windows;C:/cpp_libs/vcpkg/installed/x64-windows/lib;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6")
 
 project(LabGUI VERSION 0.1 LANGUAGES CXX)
+set(DEPLOY_DIR "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/deploy")
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
+set(CMAKE_BUILD_TYPE Debug)
 
 
 set(SRC_DIR "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src")
@@ -15,18 +17,22 @@ set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
 set(Eigen3_DIR "C:/cpp_libs/vcpkg/buildtrees/eigen3/x64-windows-rel")
 set(BOOST_INCLUDE_DIR "C:/cpp_libs/boost_1_85_0")
 set(BOOST_IOSTREAMS_LIB "C:/cpp_libs/boost_1_85_0/stage/lib/libboost_iostreams-vc143-mt-gd-x64-1_85.lib")
+set(BOOST_IOSTREAMS_LIB_DEPLOY "C:/cpp_libs/boost_1_85_0/stage/lib/libboost_iostreams-vc143-mt-x64-1_85.lib")
 set(BOOST_FILESYSTEM_LIB "C:/cpp_libs/boost_1_85_0/stage/lib/libboost_filesystem-vc143-mt-gd-x64-1_85.lib")
+set(BOOST_FILESYSTEM_LIB_DEPLOY "C:/cpp_libs/boost_1_85_0/stage/lib/libboost_filesystem-vc143-mt-x64-1_85.lib")
 set(MATPLOTLIB_DIR "C:/cpp_libs/vcpkg/installed/x64-windows/include")
 set(GNUPLOT_DIR "C:/cpp_libs/gnuplot-iostream")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools DataVisualization Graphs Charts)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools DataVisualization Graphs Charts)
-find_package(Vulkan REQUIRED)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools DataVisualization Graphs Charts OpenGL)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools DataVisualization Graphs Charts OpenGL)
+# find_package(Vulkan REQUIRED)
 find_package(Eigen3 CONFIG REQUIRED)
-find_package(Boost REQUIRED)
+find_package(Boost REQUIRED iostreams)
+find_package(OpenGL REQUIRED COMPONENTS OpenGL)
+find_package(ZLIB REQUIRED)
 
 set(TS_FILES LabGUI_pl_PL.ts)
 
@@ -37,6 +43,8 @@ set(PROJECT_SOURCES
     src/mainwindow.ui
     src/interface.cpp
     src/interface.h
+    src/glplotwidget.cpp
+    src/glplotwidget.h
 )
 
 include_directories(${PROJECT_SOURCES}
@@ -44,6 +52,7 @@ include_directories(${PROJECT_SOURCES}
                     ${Eigen3_DIR}
                     ${BOOST_INCLUDE_DIR}
                     ${GNUPLOT_DIR}
+                    PRIVATE ${OPENGL_INCLUDE_DIR}
                     )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -79,10 +88,17 @@ target_link_libraries(LabGUI
                         PRIVATE Qt${QT_VERSION_MAJOR}::DataVisualization
                         PRIVATE Qt${QT_VERSION_MAJOR}::Graphs
                         PRIVATE Qt${QT_VERSION_MAJOR}::Charts
-                        PRIVATE Vulkan::Vulkan
+                        PRIVATE Qt${QT_VERSION_MAJOR}::OpenGL
+                        ${OPENGL_gl_LIBRARY}
+                        PRIVATE OpenGL::GL
+                        PRIVATE OpenGL::GLU
+                        # PRIVATE Vulkan::Vulkan
                         PRIVATE Eigen3::Eigen
                         ${BOOST_IOSTREAMS_LIB}
-                        ${BOOST_FILESYSTEM_LIB})
+                        ${BOOST_IOSTREAMS_LIB_DEPLOY}
+                        ${BOOST_FILESYSTEM_LIB}
+                        ${BOOST_FILESYSTEM_LIB_DEPLOY}
+                        PRIVATE ZLIB::ZLIB)
 
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

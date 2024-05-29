@@ -116,13 +116,13 @@ def getRotationMatrix(rotation_angles):
 if __name__ == '__main__':
     L_vector_length = 10
 
-    alpha = np.pi/3
-    beta = np.pi/4
-    gamma = np.pi/6
+    # alpha = np.pi/3
+    # beta = np.pi/4
+    # gamma = np.pi/6
 
-    # alpha = 0
-    # beta = 0
-    # gamma = 0
+    alpha = 0
+    beta = 0
+    gamma = 0
 
     x_kr = np.array([30, 0, 0])
     x_kl = np.array([-30, 0, 0])

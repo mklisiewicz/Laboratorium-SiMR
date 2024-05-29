@@ -63,23 +63,20 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-9gw8pa"
-      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-9gw8pa"
+      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-p05sg2"
+      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-p05sg2"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      VCPKG_APPLOCAL_DEPS: "ON"
-      VCPKG_TARGET_TRIPLET: "x64-windows"
-      Z_VCPKG_ROOT_DIR: "C:/cpp_libs/vcpkg"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-9gw8pa'
+        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-p05sg2'
         
-        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_b387a
-        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_b387a.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_b387a.dir\\ /FS -c "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_b387a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b387a.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_b387a.exe /implib:cmTC_b387a.lib /pdb:cmTC_b387a.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9gw8pa && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/cpp_libs/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-9gw8pa/cmTC_b387a.exe -installedDir C:/cpp_libs/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_ce81d
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_ce81d.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_ce81d.dir\\ /FS -c "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_ce81d.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ce81d.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_ce81d.exe /implib:cmTC_ce81d.lib /pdb:cmTC_ce81d.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -89,37 +86,32 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:163 (_threads_check_libc)"
-      - "C:/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:27 (_qt_internal_find_third_party_dependencies)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:124 (include)"
-      - "C:/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
-      - "CMakeLists.txt:34 (find_package)"
+      - "CMakeLists.txt:29 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-afyjea"
-      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-afyjea"
+      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-rogxzw"
+      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-rogxzw"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       CMAKE_MODULE_PATH: "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
-      VCPKG_APPLOCAL_DEPS: "ON"
-      VCPKG_TARGET_TRIPLET: "x64-windows"
-      Z_VCPKG_ROOT_DIR: "C:/cpp_libs/vcpkg"
     buildResult:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-afyjea'
+        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-rogxzw'
         
-        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_cdcb5
-        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_cdcb5.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_cdcb5.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-afyjea\\src.cxx
-        FAILED: CMakeFiles/cmTC_cdcb5.dir/src.cxx.obj 
-        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_cdcb5.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_cdcb5.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-afyjea\\src.cxx
-        C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-afyjea\\src.cxx(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_4107d
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_4107d.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_4107d.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rogxzw\\src.cxx
+        FAILED: CMakeFiles/cmTC_4107d.dir/src.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_4107d.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_4107d.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rogxzw\\src.cxx
+        C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rogxzw\\src.cxx(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -129,37 +121,33 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:175 (_threads_check_lib)"
-      - "C:/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:27 (_qt_internal_find_third_party_dependencies)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:124 (include)"
-      - "C:/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
-      - "CMakeLists.txt:34 (find_package)"
+      - "CMakeLists.txt:29 (find_package)"
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-9wosrg"
-      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-9wosrg"
+      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-65150e"
+      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-65150e"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       CMAKE_MODULE_PATH: "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
-      VCPKG_APPLOCAL_DEPS: "ON"
-      VCPKG_TARGET_TRIPLET: "x64-windows"
-      Z_VCPKG_ROOT_DIR: "C:/cpp_libs/vcpkg"
     buildResult:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-9wosrg'
+        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-65150e'
         
-        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_13daf
-        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_13daf.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_13daf.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9wosrg\\CheckFunctionExists.cxx
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_13daf.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_13daf.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_13daf.exe /implib:cmTC_13daf.lib /pdb:cmTC_13daf.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9wosrg && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/cpp_libs/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-9wosrg/cmTC_13daf.exe -installedDir C:/cpp_libs/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
-        FAILED: cmTC_13daf.exe 
-        cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_13daf.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_13daf.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_13daf.exe /implib:cmTC_13daf.lib /pdb:cmTC_13daf.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9wosrg && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/cpp_libs/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-9wosrg/cmTC_13daf.exe -installedDir C:/cpp_libs/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
-        LINK Pass 1: command "C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_13daf.dir\\CheckFunctionExists.cxx.obj /out:cmTC_13daf.exe /implib:cmTC_13daf.lib /pdb:cmTC_13daf.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_13daf.dir/intermediate.manifest CMakeFiles\\cmTC_13daf.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_93a03
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_93a03.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_93a03.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-65150e\\CheckFunctionExists.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_93a03.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_93a03.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_93a03.exe /implib:cmTC_93a03.lib /pdb:cmTC_93a03.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_93a03.exe 
+        cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_93a03.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_93a03.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_93a03.exe /implib:cmTC_93a03.lib /pdb:cmTC_93a03.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_93a03.dir\\CheckFunctionExists.cxx.obj /out:cmTC_93a03.exe /implib:cmTC_93a03.lib /pdb:cmTC_93a03.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_93a03.dir/intermediate.manifest CMakeFiles\\cmTC_93a03.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthreads.lib'\x0d
         ninja: build stopped: subcommand failed.
         
@@ -170,37 +158,33 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:176 (_threads_check_lib)"
-      - "C:/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:27 (_qt_internal_find_third_party_dependencies)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:124 (include)"
-      - "C:/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
-      - "CMakeLists.txt:34 (find_package)"
+      - "CMakeLists.txt:29 (find_package)"
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-1fmyt9"
-      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-1fmyt9"
+      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-28ff4k"
+      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-28ff4k"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       CMAKE_MODULE_PATH: "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
-      VCPKG_APPLOCAL_DEPS: "ON"
-      VCPKG_TARGET_TRIPLET: "x64-windows"
-      Z_VCPKG_ROOT_DIR: "C:/cpp_libs/vcpkg"
     buildResult:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-1fmyt9'
+        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-28ff4k'
         
-        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_b4893
-        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_b4893.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_b4893.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1fmyt9\\CheckFunctionExists.cxx
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_b4893.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b4893.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_b4893.exe /implib:cmTC_b4893.lib /pdb:cmTC_b4893.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1fmyt9 && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/cpp_libs/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-1fmyt9/cmTC_b4893.exe -installedDir C:/cpp_libs/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
-        FAILED: cmTC_b4893.exe 
-        cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_b4893.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b4893.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_b4893.exe /implib:cmTC_b4893.lib /pdb:cmTC_b4893.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1fmyt9 && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/cpp_libs/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-1fmyt9/cmTC_b4893.exe -installedDir C:/cpp_libs/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
-        LINK Pass 1: command "C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b4893.dir\\CheckFunctionExists.cxx.obj /out:cmTC_b4893.exe /implib:cmTC_b4893.lib /pdb:cmTC_b4893.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_b4893.dir/intermediate.manifest CMakeFiles\\cmTC_b4893.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_f5303
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_f5303.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_f5303.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-28ff4k\\CheckFunctionExists.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_f5303.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f5303.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_f5303.exe /implib:cmTC_f5303.lib /pdb:cmTC_f5303.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_f5303.exe 
+        cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_f5303.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f5303.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_f5303.exe /implib:cmTC_f5303.lib /pdb:cmTC_f5303.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f5303.dir\\CheckFunctionExists.cxx.obj /out:cmTC_f5303.exe /implib:cmTC_f5303.lib /pdb:cmTC_f5303.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_f5303.dir/intermediate.manifest CMakeFiles\\cmTC_f5303.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthread.lib'\x0d
         ninja: build stopped: subcommand failed.
         
@@ -211,42 +195,155 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
-      - "C:/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:33 (_qt_internal_find_third_party_dependencies)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
-      - "C:/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
       - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:42 (_qt_internal_find_qt_dependencies)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
-      - "C:/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
       - "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:169 (find_package)"
-      - "C:/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
-      - "CMakeLists.txt:35 (find_package)"
+      - "CMakeLists.txt:30 (find_package)"
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-bqx7w5"
-      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-bqx7w5"
+      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-embc3k"
+      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-embc3k"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       CMAKE_MODULE_PATH: "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
-      VCPKG_APPLOCAL_DEPS: "ON"
-      VCPKG_TARGET_TRIPLET: "x64-windows"
-      Z_VCPKG_ROOT_DIR: "C:/cpp_libs/vcpkg"
     buildResult:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-bqx7w5'
+        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-embc3k'
         
-        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_11f83
-        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DHAVE_STDATOMIC  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_11f83.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_11f83.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bqx7w5\\src.cxx
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_11f83.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_11f83.dir\\src.cxx.obj  /out:cmTC_11f83.exe /implib:cmTC_11f83.lib /pdb:cmTC_11f83.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bqx7w5 && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/cpp_libs/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-bqx7w5/cmTC_11f83.exe -installedDir C:/cpp_libs/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_02bce
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DHAVE_STDATOMIC  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_02bce.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_02bce.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-embc3k\\src.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_02bce.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_02bce.dir\\src.cxx.obj  /out:cmTC_02bce.exe /implib:cmTC_02bce.lib /pdb:cmTC_02bce.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckSymbolExists.cmake:70 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindBZip2.cmake:93 (CHECK_SYMBOL_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iostreams/boost_iostreams-config.cmake:57 (find_dependency)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:67 (find_package)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindBoost.cmake:594 (find_package)"
+      - "CMakeLists.txt:33 (find_package)"
+    directories:
+      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-2gu396"
+      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-2gu396"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "BZIP2_NEED_PREFIX"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-2gu396'
+        
+        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_17f44
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP  -IC:\\cpp_libs\\vcpkg\\installed\\x64-windows\\include /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_17f44.dir\\CheckSymbolExists.cxx.obj /FdCMakeFiles\\cmTC_17f44.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2gu396\\CheckSymbolExists.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_17f44.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_17f44.dir\\CheckSymbolExists.cxx.obj  /out:cmTC_17f44.exe /implib:cmTC_17f44.lib /pdb:cmTC_17f44.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  C:\\cpp_libs\\vcpkg\\installed\\x64-windows\\lib\\bz2.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindLibLZMA.cmake:97 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iostreams/boost_iostreams-config.cmake:58 (find_dependency)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:67 (find_package)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindBoost.cmake:594 (find_package)"
+      - "CMakeLists.txt:33 (find_package)"
+    directories:
+      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-h5tosx"
+      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-h5tosx"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "LIBLZMA_HAS_AUTO_DECODER"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-h5tosx'
+        
+        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_d0fb6
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=lzma_auto_decoder /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_d0fb6.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_d0fb6.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-h5tosx\\CheckFunctionExists.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_d0fb6.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_d0fb6.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_d0fb6.exe /implib:cmTC_d0fb6.lib /pdb:cmTC_d0fb6.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  C:\\cpp_libs\\vcpkg\\installed\\x64-windows\\lib\\lzma.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindLibLZMA.cmake:98 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iostreams/boost_iostreams-config.cmake:58 (find_dependency)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:67 (find_package)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindBoost.cmake:594 (find_package)"
+      - "CMakeLists.txt:33 (find_package)"
+    directories:
+      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-t2g6jg"
+      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-t2g6jg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "LIBLZMA_HAS_EASY_ENCODER"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-t2g6jg'
+        
+        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_6202f
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=lzma_easy_encoder /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_6202f.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_6202f.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t2g6jg\\CheckFunctionExists.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_6202f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6202f.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_6202f.exe /implib:cmTC_6202f.lib /pdb:cmTC_6202f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  C:\\cpp_libs\\vcpkg\\installed\\x64-windows\\lib\\lzma.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindLibLZMA.cmake:99 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost_iostreams/boost_iostreams-config.cmake:58 (find_dependency)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:67 (find_package)"
+      - "C:/cpp_libs/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindBoost.cmake:594 (find_package)"
+      - "CMakeLists.txt:33 (find_package)"
+    directories:
+      source: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-ayzqcd"
+      binary: "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-ayzqcd"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.7.1/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "LIBLZMA_HAS_LZMA_PRESET"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/CMakeScratch/TryCompile-ayzqcd'
+        
+        Run Build Command(s): C:/Users/mmate/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_d8ff8
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=lzma_lzma_preset /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_d8ff8.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_d8ff8.dir\\ /FS -c C:\\Users\\mmate\\SiMR\\Laboratorium-SiMR\\LabGUI\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ayzqcd\\CheckFunctionExists.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_d8ff8.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_d8ff8.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_d8ff8.exe /implib:cmTC_d8ff8.lib /pdb:cmTC_d8ff8.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  C:\\cpp_libs\\vcpkg\\installed\\x64-windows\\lib\\lzma.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
 ...

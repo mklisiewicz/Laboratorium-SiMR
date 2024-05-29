@@ -128,11 +128,14 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QSizeF \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QString \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QStringList \
+  C:/Qt/6.7.1/msvc2019_64/include/QtCore/QThread \
+  C:/Qt/6.7.1/msvc2019_64/include/QtCore/QTimer \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QUrl \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QVariant \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QtCore \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QtCoreDepends \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QtGlobal \
+  C:/Qt/6.7.1/msvc2019_64/include/QtCore/QtMath \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/q20algorithm.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/q20chrono.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/q20functional.h \
@@ -709,6 +712,7 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGL/qtopenglexports.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGL/qtopenglglobal.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGL/qtopenglversion.h \
+  C:/Qt/6.7.1/msvc2019_64/include/QtOpenGLWidgets/QOpenGLWidget \
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
   C:/Qt/6.7.1/msvc2019_64/include/QtOpenGLWidgets/qopenglwidget.h \
@@ -981,6 +985,7 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/qwidget.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/qwidgetaction.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/qwizard.h \
+  C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.h \
   C:/cpp_libs/boost_1_85_0/boost/array.hpp \
   C:/cpp_libs/boost_1_85_0/boost/assert.hpp \
   C:/cpp_libs/boost_1_85_0/boost/assert/source_location.hpp \
@@ -2595,4 +2600,5 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc
   C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/IndexedViewMethods.h \
   C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
   C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/ReshapedMethods.h
+  C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/ReshapedMethods.h \
+  C:/cpp_libs/vcpkg/installed/x64-windows/include/GL/gl.h

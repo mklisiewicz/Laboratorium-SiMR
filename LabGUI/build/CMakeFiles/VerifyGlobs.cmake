@@ -43,14 +43,20 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/*.cpp")
 set(OLD_GLOB
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/3.27.0-rc4/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+  "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc_baseinterfacewidget.cpp"
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc_glplotwidget.cpp"
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc_interface.cpp"
+  "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc_mainmenu.cpp"
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc_mainwindow.cpp"
+  "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc_submenu.cpp"
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/mocs_compilation.cpp"
+  "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/baseinterfacewidget.cpp"
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.cpp"
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.cpp"
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/main.cpp"
+  "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainmenu.cpp"
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.cpp"
+  "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/submenu.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -70,10 +76,12 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/*.h")
 set(OLD_GLOB
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/CMakeFiles/ShowIncludes/foo.h"
-  "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/calculationworker.h"
+  "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/baseinterfacewidget.h"
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.h"
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.h"
+  "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainmenu.h"
   "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.h"
+  "C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/submenu.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

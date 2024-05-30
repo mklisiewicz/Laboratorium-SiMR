@@ -119,6 +119,7 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QPoint \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QPointF \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QProcess \
+  C:/Qt/6.7.1/msvc2019_64/include/QtCore/QPropertyAnimation \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QRect \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QRectF \
   C:/Qt/6.7.1/msvc2019_64/include/QtCore/QRegularExpression \
@@ -509,6 +510,7 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc
   C:/Qt/6.7.1/msvc2019_64/include/QtGui/QOpenGLFunctions \
   C:/Qt/6.7.1/msvc2019_64/include/QtGui/QPaintDevice \
   C:/Qt/6.7.1/msvc2019_64/include/QtGui/QPaintDeviceWindow \
+  C:/Qt/6.7.1/msvc2019_64/include/QtGui/QPalette \
   C:/Qt/6.7.1/msvc2019_64/include/QtGui/QPen \
   C:/Qt/6.7.1/msvc2019_64/include/QtGui/QQuaternion \
   C:/Qt/6.7.1/msvc2019_64/include/QtGui/QShortcut \
@@ -848,6 +850,7 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QApplication \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QComboBox \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QCommonStyle \
+  C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QDockWidget \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QFrame \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QGraphicsView \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QGraphicsWidget \
@@ -861,6 +864,8 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QPushButton \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QScrollerProperties \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QSlider \
+  C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QStackedLayout \
+  C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QTabWidget \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QWidget \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/QtWidgets \
@@ -989,8 +994,11 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/LabGUI_autogen/UVLADIE3JM/moc
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/qwidget.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/qwidgetaction.h \
   C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/qwizard.h \
+  C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/baseinterfacewidget.h \
   C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.h \
   C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.h \
+  C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainmenu.h \
+  C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/submenu.h \
   C:/cpp_libs/boost_1_85_0/boost/array.hpp \
   C:/cpp_libs/boost_1_85_0/boost/assert.hpp \
   C:/cpp_libs/boost_1_85_0/boost/assert/source_location.hpp \

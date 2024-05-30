@@ -89,6 +89,7 @@ bool GLPlotWidget::project(float objX, float objY, float objZ, float& winX, floa
     return false;
 }
 
+
 void GLPlotWidget::drawText(const QString& text, float x, float y, float z) {
     float winX, winY;
     if (project(x, y, z, winX, winY)) {
@@ -143,7 +144,6 @@ void GLPlotWidget::drawAxes() {
     }
     glEnd();
 
-    glColor3f(1.0f, 1.0f, 1.0f);
     for (int i = 0; i <= numTicks; ++i) {
         float x = -xRange + i * tickSpacingX;
         (QString::number(x), x, -0.5 * tickLength, 0.0);
@@ -159,7 +159,7 @@ void GLPlotWidget::drawAxes() {
     glEnd();
 
     // Draw labels for Y axis
-    glColor3f(1.0f, 1.0f, 1.0f);
+
     for (int i = 0; i <= numTicks; ++i) {
         float y = -yRange + i * tickSpacingY;
         drawText(QString::number(y), -0.5 * tickLength, y, 0.0);
@@ -175,7 +175,7 @@ void GLPlotWidget::drawAxes() {
     glEnd();
 
     // Draw labels for Z axis
-    glColor3f(0.0f, 0.0f, 0.0f);
+
     for (int i = 0; i <= numTicks; ++i) {
         float z = -zRange + i * tickSpacingZ;
         drawText(QString::number(z), 0.0, -0.5 * tickLength, z);

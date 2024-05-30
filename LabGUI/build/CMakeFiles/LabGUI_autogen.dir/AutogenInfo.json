@@ -1530,6 +1530,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/baseinterfacewidget.h",
+			"MU",
+			"UVLADIE3JM/moc_baseinterfacewidget.cpp",
+			null
+		],
+		[
 			"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.h",
 			"MU",
 			"UVLADIE3JM/moc_glplotwidget.cpp",
@@ -1542,9 +1548,21 @@
 			null
 		],
 		[
+			"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainmenu.h",
+			"MU",
+			"UVLADIE3JM/moc_mainmenu.cpp",
+			null
+		],
+		[
 			"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.h",
 			"MU",
 			"UVLADIE3JM/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/submenu.h",
+			"MU",
+			"UVLADIE3JM/moc_submenu.cpp",
 			null
 		]
 	],
@@ -1595,8 +1613,14 @@
 		"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.ui",
 		"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.cpp",
 		"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.h",
+		"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainmenu.cpp",
+		"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainmenu.h",
 		"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.cpp",
 		"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.h",
+		"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/submenu.cpp",
+		"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/submenu.h",
+		"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/baseinterfacewidget.cpp",
+		"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/baseinterfacewidget.h",
 		"/installed/include/eigen3",
 		"C:/cpp_libs/vcpkg/buildtrees/eigen3/x64-windows-rel",
 		"C:/cpp_libs/boost_1_85_0",
@@ -1653,6 +1677,11 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/baseinterfacewidget.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.cpp",
 			"MU",
 			null
@@ -1668,7 +1697,17 @@
 			null
 		],
 		[
+			"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainmenu.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/submenu.cpp",
 			"MU",
 			null
 		]

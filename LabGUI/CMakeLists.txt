@@ -43,8 +43,14 @@ set(PROJECT_SOURCES
     src/mainwindow.ui
     src/interface.cpp
     src/interface.h
+    src/mainmenu.cpp
+    src/mainmenu.h
     src/glplotwidget.cpp
     src/glplotwidget.h
+    src/submenu.cpp
+    src/submenu.h
+    src/baseinterfacewidget.cpp
+    src/baseinterfacewidget.h
 )
 
 include_directories(${PROJECT_SOURCES}

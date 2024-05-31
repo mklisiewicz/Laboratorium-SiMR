@@ -3124,6 +3124,7 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainmenu.h
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/qwidget.h
  mdp:C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainmenu.h
  mdp:C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/submenu.h
+C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.cpp
 C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtCharts/QAbstractAxis
@@ -5743,7 +5744,7 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainwindow.h
  mdp:C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/MatrixCwiseUnaryOps.h
  mdp:C:/cpp_libs/vcpkg/installed/x64-windows/include/Eigen/src/plugins/ReshapedMethods.h
  mdp:C:/cpp_libs/vcpkg/installed/x64-windows/include/GL/gl.h
-C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/glplotwidget.cpp
+C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/baseinterfacewidget.cpp
 C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/submenu.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtCore/QPropertyAnimation
@@ -5908,7 +5909,6 @@ C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/submenu.h
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.7.1/msvc2019_64/include/QtWidgets/qwidget.h
  mdp:C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/submenu.h
-C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/baseinterfacewidget.cpp
 C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/interface.cpp
 C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/main.cpp
 C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/src/mainmenu.cpp

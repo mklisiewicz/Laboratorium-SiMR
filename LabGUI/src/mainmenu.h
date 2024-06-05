@@ -33,6 +33,11 @@ private:
     QPropertyAnimation *collapseAnimation;
     const int collapsedWidth = 60;
     const int expandedWidth = 200;
+    QList<QString> menuTitles = {"Drgania Mechaniczne",
+                                "Podstawy Konstrukcji Maszyn",
+                                "3",
+                                "4",
+                                "5"};
 };
 
 #endif // MAINMENU_H

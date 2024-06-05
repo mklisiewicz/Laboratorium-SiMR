@@ -15,8 +15,8 @@ MainMenu::MainMenu(QWidget *parent) : QWidget(parent), currentMenu(nullptr) {
     setGraphicsEffect(shadowEffect);
 
     
-    for (int i = 0; i < 5; ++i) {
-        QPushButton *button = new QPushButton(QString("Main Button %1").arg(i + 1), this);
+    for (int i = 0; i < 3; ++i) {
+        QPushButton *button = new QPushButton(menuTitles[i], this);
         
         button->setMinimumHeight(30);
         button->setFlat(true);
@@ -28,7 +28,7 @@ MainMenu::MainMenu(QWidget *parent) : QWidget(parent), currentMenu(nullptr) {
         layout->insertWidget(layout->count() - 1, button); // Insert before the stretch
         mainButtons.append(button);
 
-        SubMenu *subMenu = new SubMenu(this);
+        SubMenu *subMenu = new SubMenu(i, this);
         layout->insertWidget(layout->count() - 1, subMenu); // Insert before the stretch
         subMenus.append(subMenu);
 

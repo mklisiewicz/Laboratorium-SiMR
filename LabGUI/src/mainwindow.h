@@ -37,5 +37,6 @@ private:
     MainMenu *menu;
     BaseInterfaceWidget *interfaceWidget;
     QWidget *placeholderWidget;
+    interface *interfacehuj;
 };
 #endif // MAINWINDOW_H

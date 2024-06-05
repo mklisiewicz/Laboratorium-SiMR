@@ -8,8 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
     
 
     menu = new MainMenu(this);
-    placeholderWidget = new QWidget(this);
-
+    placeholderWidget = new BaseInterfaceWidget(this);
+    // interfacehuj = new interface(this);
     mainLayout->addWidget(menu);
     mainLayout->addWidget(placeholderWidget);
 
@@ -24,6 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
     placeholderWidget->setStyleSheet("background-image: url(../res/WSiMR.png); background-attachment: fixed; background-repeat: no-repeat; background-position: center;");
 
     setCentralWidget(centralWidget);
+    // setCentralWidget(interfacehuj);
 
     connect(menu, &MainMenu::widgetSelected, this, &MainWindow::changeInterfaceWidget);
     resize(800, 600);

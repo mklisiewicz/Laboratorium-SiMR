@@ -242,7 +242,7 @@ build .qt\qml_imports\LabGUI_build.cmake | ${cmake_ninja_workdir}.qt\qml_imports
 #############################################
 # Phony custom command for CMakeFiles\LabGUI_autogen_timestamp_deps
 
-build CMakeFiles\LabGUI_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles\LabGUI_autogen_timestamp_deps: phony C$:\Qt\6.7.1\msvc2019_64\.\bin\moc.exe C$:\Qt\6.7.1\msvc2019_64\lib\Qt6OpenGLd.lib C$:\Qt\6.7.1\msvc2019_64\lib\Qt6Cored.lib C$:\Qt\6.7.1\msvc2019_64\.\bin\uic.exe C$:\Qt\6.7.1\msvc2019_64\lib\Qt6Widgetsd.lib C$:\Qt\6.7.1\msvc2019_64\lib\Qt6DataVisualizationd.lib C$:\cpp_libs\vcpkg\installed\x64-windows\lib\zlib.lib C$:\Qt\6.7.1\msvc2019_64\lib\Qt6Graphsd.lib C$:\Qt\6.7.1\msvc2019_64\lib\Qt6Chartsd.lib
+build CMakeFiles\LabGUI_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles\LabGUI_autogen_timestamp_deps: phony C$:\Qt\6.7.1\msvc2019_64\.\bin\moc.exe C$:\cpp_libs\vcpkg\installed\x64-windows\lib\zlib.lib C$:\Qt\6.7.1\msvc2019_64\lib\Qt6Cored.lib C$:\Qt\6.7.1\msvc2019_64\.\bin\uic.exe C$:\Qt\6.7.1\msvc2019_64\lib\Qt6Widgetsd.lib C$:\Qt\6.7.1\msvc2019_64\lib\Qt6DataVisualizationd.lib C$:\Qt\6.7.1\msvc2019_64\lib\Qt6OpenGLd.lib C$:\Qt\6.7.1\msvc2019_64\lib\Qt6Graphsd.lib C$:\Qt\6.7.1\msvc2019_64\lib\Qt6Chartsd.lib
 
 
 #############################################

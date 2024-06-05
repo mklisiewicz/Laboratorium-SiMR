@@ -5,7 +5,10 @@ from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.animation as animation
+from matplotlib.animation import FFMpegWriter
 from sympy import pprint
+import cube_positioning as cp
+
 
 
 # Define symbols and functions
@@ -59,11 +62,11 @@ def get_rotation_matrix(alpha, beta, gamma):
 # Get the combined rotation matrix
 R = get_rotation_matrix(alpha, beta, gamma)
 
-# Initial displacement vectors for the four springs
-vector_kr = sp.Matrix([30, 0, 0])
-vector_kl = sp.Matrix([-30, 0, 0])
-vector_kt = sp.Matrix([0, 0, 30])
-vector_kb = sp.Matrix([0, 0, -30])
+cube_k_vector_length = 30
+vector_kr = sp.Matrix([1, 0, 0])*cube_k_vector_length
+vector_kl = sp.Matrix([-1, 0, 0])*cube_k_vector_length
+vector_kt = sp.Matrix([0, 0, 1])*cube_k_vector_length
+vector_kb = sp.Matrix([0, 0, -1])*cube_k_vector_length
 
 kr = sp.Matrix([100, 0, 0])
 kl = sp.Matrix([-100, 0, 0])
@@ -187,19 +190,24 @@ def f(t, y, g, m, k, l_0):
              a_beta(t, g, m, k, l_0, q, q_dot),
              a_gamma(t, g, m, k, l_0, q, q_dot)]
 
-t_span = [0, 5]
+t_span = [0, 20]
 t_eval = np.linspace(*t_span, 1000)
 
-q_ic = np.array([-40, -40, 20, 5, 0, 0])
+q_ic = np.array([0, 5, 5, 0, 0, 0])
 q_dot_ic = np.array([0, 0, 0, 0, 0, 0])
 g = 9.81
-m = 20
-k = 2
+m = 1
+k = 20
 l_0 = 40
 
+kr_0 = np.array([100, 0, 0])
+kl_0 = np.array([-100, 0, 0])
+kt_0 = np.array([0, 0, 100])
+kb_0 = np.array([0, 0, -100])
+
+k_0 = np.array([kl_0, kr_0, kb_0, kt_0])
+
 initial_conditions = np.concatenate([q_ic, q_dot_ic])
-
-
 
 ans = solve_ivp(f, t_span, initial_conditions, args=(g, m, k, l_0), t_eval=t_eval, method='Radau')
 
@@ -214,31 +222,69 @@ ax = fig.add_subplot(111, projection='3d')
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
-ax.set_xlim([-100, 100])
-ax.set_ylim([-100, 100])
-ax.set_zlim([-100, 100])
+ax.set_xlim([-60, 60])
+ax.set_ylim([-60, 60])
+ax.set_zlim([-60, 60])
 
-# ax.plot(ans.y[:, 0], ans.y[:, 1], ans.y[:, 2])
 
-point, = ax.plot([ans.y[0, 0]], [ans.y[0, 1]], [ans.y[0, 2]], 'o')
+data = ans.y.T
+x_t = data[:, 0]
+y_t = data[:, 1]
+z_t = data[:, 2]
 
-# Update function for animation
-def update(num, ans, point):
-    point.set_data(list(ans.y[num, 0:2]))
-    point.set_3d_properties(ans.y[num, 2])
-    
-    # Remove previous text
+alpha_t = data[:, 3]
+beta_t = data[:, 4]
+gamma_t = data[:, 5]
+
+v_x_t = data[:, 6]
+v_y_t = data[:, 7]
+v_z_t = data[:, 8]
+
+v_alpha_t = data[:, 9]
+v_beta_t = data[:, 10]
+v_gamma_t = data[:, 11]
+
+
+def getNormalVector(vectors, rotation_matrix, P_0):
+    n=rotation_matrix @ np.cross(vectors[0] + P_0, vectors[1] + P_0)
+    return n
+
+point, = ax.plot(x_t[0], y_t[0], z_t[0], 'o')
+rotation_angles_t = [alpha_t, beta_t, gamma_t]
+
+q_t=[x_t, y_t, z_t, alpha_t, beta_t, gamma_t]
+q_dot_t=[v_x_t, v_y_t, v_z_t, v_alpha_t, v_beta_t, v_gamma_t]
+results = [q_t, q_dot_t]
+
+def update(num, res, point):
+    x_t, y_t, z_t, alpha_t, beta_t, gamma_t = results[0]
+    v_x_t, v_y_t, v_z_t, v_alpha_t, v_beta_t, v_gamma_t = results[1]
+    ax.clear()
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z')
+    ax.set_xlim([-60, 60])
+    ax.set_ylim([-60, 60])
+    ax.set_zlim([-60, 60])
+    P_0 = [x_t[num], y_t[num], z_t[num]]
+    point.set_data(list([x_t[num], y_t[num]]))
+    point.set_3d_properties(data[num, 2])
+    rotation = [alpha_t[num], beta_t[num], gamma_t[num]]
+    R = cp.getRotationMatrix(rotation)
+    calc_vector_kr = np.array([1, 0, 0])*cube_k_vector_length
+    calc_vector_kt = np.array([0, 0, 1])*cube_k_vector_length
+    cube_k_vectors = np.array([calc_vector_kr, calc_vector_kt])
+    cp.plotCubePosition(ax, cube_k_vectors, P_0, R, k_0)
+
     if hasattr(update, 'txt'):
         update.txt.remove()
     
-    # Add text
-    update.txt = ax.text(0, 0, 0, f'x={ans.y[num, 0]:.2f}, y={ans.y[num, 1]:.2f}, z={ans.y[num, 2]:.2f}, vx={ans.y[num, 6]:.2f}, vy={ans.y[num, 7]:.2f}, vz={ans.y[num, 8]:.2f}', color='black')
+    update.txt = ax.text(0, 0, 0, f'x={x_t[num]:.2f}, y={y_t[num]:.2f}, z={z_t[num]:.2f}, vx={v_x_t[num]:.2f}, vy={v_y_t[num]:.2f}, vz={v_z_t[num]:.2f}', color='black')
 
-fps = ans.y.shape[0] / (t_span[1] - t_span[0])
 
-ani = animation.FuncAnimation(fig, update, frames=ans.y.shape[0], fargs=(ans, point))
+ani = animation.FuncAnimation(fig, update, frames=1000, fargs=(results, point))
 
 # Save as gif
-ani.save('trajectory.mp4', writer='ffmpeg', fps=fps)
-ani.save('trajectory.gif', writer='pillow', fps=fps)
+ani.save('trajectory.mp4', writer='ffmpeg', fps=1000/20)
+
 plt.show()

@@ -10,7 +10,7 @@ class SubMenu : public QWidget {
     Q_OBJECT
 
 public:
-    explicit SubMenu(QWidget *parent = nullptr);
+    explicit SubMenu(int menuIndex, QWidget *parent = nullptr);
 
     void toggleSubMenu();
     void collapseSubMenu();
@@ -27,6 +27,24 @@ private:
     QPropertyAnimation *collapseAnimation;
     static constexpr int collapsedHeight = 0;
     static constexpr int expandedHeight = 100; // Adjust this as needed
+    QList<QString> drganiaTitles = {"Płaszczyzna Fazowa",
+                                    "Dynamiczny Eliminator Drgań",
+                                    "Układ o Dwóch Stopniach Swobody",
+                                    "Częstotliwość Drgań Własnych Pręta",
+                                    "Układ Liniowy"};
+    QList<QString> pkmTitles = {"Płaszczyzna Fazowa",
+                                    "Dynamiczny Eliminator Drgań",
+                                    "Układ o Dwóch Stopniach Swobody",
+                                    "Częstotliwość Drgań Własnych Pręta",
+                                    "Układ Liniowy"};
+    QList<QString> fluidTitles = {"Płaszczyzna Fazowa",
+                                    "Dynamiczny Eliminator Drgań",
+                                    "Układ o Dwóch Stopniach Swobody",
+                                    "Częstotliwość Drgań Własnych Pręta",
+                                    "Układ Liniowy"};
+    QList<QList<QString>*> subtitles = {&drganiaTitles,
+                                        &pkmTitles,
+                                        &fluidTitles};
 };
 
 #endif // SUBMENU_H

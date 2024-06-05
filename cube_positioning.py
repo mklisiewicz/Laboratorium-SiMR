@@ -29,28 +29,22 @@ def solveCubeXTrajectory(k, m):
    
     return x, v, E, x_0, v_0, E_0
 
-def plotCubePosition(normal_vector, P_0, cube_axes, points):
+def plotCubePosition(ax, cube_k_vectors, P_0, rotation_matrix, k_0):
+    # normal_vector = getNormalVector(cube_k_vectors, rotation_matrix, P_0)
+    cube_axes = getCubeAxes(cube_k_vectors, P_0, rotation_matrix)
     L_x, L_z = cube_axes
     L_xl, L_xr = L_x
     L_zb, L_zt = L_z
 
-    x_kl, x_kr, z_kb, z_kt = points
-    A, B, C = normal_vector
-    x = np.linspace(-10, 10, 100)
-    y = np.linspace(-10, 10, 100)
-    x, y = np.meshgrid(x, y)
+    x_kl, x_kr, z_kb, z_kt = k_0
+    # A, B, C = normal_vector
+    # x = np.linspace(-10, 10, 100)
+    # y = np.linspace(-10, 10, 100)
+    # x, y = np.meshgrid(x, y)
 
-    z = (-A*x - B*y)/C
+    # z = (-A*x - B*y)/C
 
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-    #ax.plot_surface(x, y, z, color='b', alpha=0.5)
-
-    ax.quiver(0, 0, 0, 1, 0, 0, color='r', length=5)  # x-axis
-    ax.quiver(0, 0, 0, 0, 1, 0, color='g', length=5)  # y-axis
-    ax.quiver(0, 0, 0, 0, 0, 1, color='b', length=5)  # z-axis
-
-    for point, color in zip(points, ['g', 'y', 'c', 'm']):
+    for point, color in zip(k_0, ['g', 'y', 'c', 'm']):
         ax.scatter(*point, color=color)
 
     ax.scatter(L_x[:, 0], L_x[:, 1], L_x[:, 2], color='r')
@@ -64,13 +58,13 @@ def plotCubePosition(normal_vector, P_0, cube_axes, points):
     ax.plot([z_kb[0], L_zb[0]], [z_kb[1], L_zb[1]], [z_kb[2], L_zb[2]], color='c')
     ax.plot([z_kt[0], L_zt[0]], [z_kt[1], L_zt[1]], [z_kt[2], L_zt[2]], color='m')
 
-    ax.set_xlim([-35, 35])
-    ax.set_ylim([-35, 35])
-    ax.set_zlim([-35, 35])
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
-    ax.set_zlabel('Z')
-    plt.show()
+    # ax.set_xlim([-60, 60])
+    # ax.set_ylim([-60, 60])
+    # ax.set_zlim([-60, 60])
+    # ax.set_xlabel('X')
+    # ax.set_ylabel('Y')
+    # ax.set_zlabel('Z')
+    # plt.show()
 
 def getCubeAxes(vectors, P_0, rotation_matrix):
     L_x_rotated = rotation_matrix @ vectors[0]   
@@ -86,7 +80,7 @@ def getCubeAxes(vectors, P_0, rotation_matrix):
 
     is_orthogonal = np.dot(L_x_rotated, L_z_rotated)
     print(is_orthogonal)
-    if is_orthogonal > 1e-14:
+    if is_orthogonal > 1e-12:
         raise ValueError("L_x and L_z are not orthogonal")
 
     L_x_axis = np.array([L_xl_rotated, L_xr_rotated])
@@ -95,23 +89,34 @@ def getCubeAxes(vectors, P_0, rotation_matrix):
     return L_x_axis, L_z_axis
 
 def getNormalVector(vectors, rotation_matrix, P_0):
-    n=rotation_matrix @ np.cross(vectors[0] + P_0, vectors[1] + P_0)
+    vector_x, vector_z = vectors
+    n=rotation_matrix @ (np.cross(vector_x, vector_z)+P_0)
     return n
 
 def getRotationMatrix(rotation_angles):
     alpha, beta, gamma = rotation_angles
 
     #  Intrinsic rotation whose Tait–Bryan angles are α, β, γ, about axes z, y, x, respectively
-    R = np.array([[np.cos(gamma)*np.cos(beta), 
-                   np.cos(gamma)*np.sin(beta)*np.sin(alpha)-np.sin(gamma)*np.cos(alpha), 
-                   np.cos(gamma)*np.sin(beta)*np.cos(alpha)+np.sin(gamma)*np.sin(alpha)],
-                  [np.sin(gamma)*np.cos(beta), 
-                   np.sin(gamma)*np.sin(beta)*np.sin(alpha)+np.cos(gamma)*np.cos(alpha), 
-                   np.sin(gamma)*np.sin(beta)*np.cos(alpha)-np.cos(gamma)*np.sin(alpha)],
-                  [-np.sin(beta), 
-                   np.cos(beta)*np.sin(alpha), 
-                   np.cos(beta)*np.cos(alpha)]])
-    return R
+    R_x = np.array([
+        [1, 0, 0],
+        [0, np.cos(alpha), -np.sin(alpha)],
+        [0, np.sin(alpha), np.cos(alpha)]
+    ])
+
+    R_y = np.array([
+        [np.cos(beta), 0, np.sin(beta)],
+        [0, 1, 0],
+        [-np.sin(beta), 0, np.cos(beta)]
+    ])
+
+    R_z = np.array([
+        [np.cos(gamma), -np.sin(gamma), 0],
+        [np.sin(gamma), np.cos(gamma), 0],
+        [0, 0, 1]
+    ])
+
+    return R_z * R_y * R_x
+    
 
 if __name__ == '__main__':
     L_vector_length = 10

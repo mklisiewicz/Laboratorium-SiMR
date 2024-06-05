@@ -1,13 +1,13 @@
 #include "submenu.h"
 
-SubMenu::SubMenu(QWidget *parent) : QWidget(parent), expanded(false) {
+SubMenu::SubMenu(int menuIndex, QWidget *parent) : QWidget(parent), expanded(false) {
     layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(0);
-
-    // Create sub-buttons
-    for (int i = 0; i < 3; ++i) { // Adjust the number of sub-buttons as needed
-        QPushButton *button = new QPushButton(QString("Sub Button %1").arg(i + 1), this);
+    QList<QString> *titles = subtitles[menuIndex];
+    
+    for (int i = 0; i < titles->size(); ++i) { // Adjust the number of sub-buttons as needed
+        QPushButton *button = new QPushButton(titles->at(i), this);
         
         button->setMinimumHeight(20);
         button->setFlat(true);

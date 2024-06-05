@@ -121,9 +121,23 @@ L = T - V
 q = sp.Matrix([x, y, z, alpha, beta, gamma])
 q_dot = sp.Matrix([x_dot, y_dot, z_dot, alpha_dot, beta_dot, gamma_dot])
 q_ddot = sp.Matrix([x_ddot, y_ddot, z_ddot, alpha_ddot, beta_ddot, gamma_ddot])
+LE_x = sp.diff(L, x) - sp.diff(sp.diff(L, x_dot), t).simplify()
+LE_y = sp.diff(L, y) - sp.diff(sp.diff(L, y_dot), t).simplify()
+LE_z = sp.diff(L, z) - sp.diff(sp.diff(L, z_dot), t).simplify()
+LE_alpha = sp.diff(L, alpha) - sp.diff(sp.diff(L, alpha_dot)).simplify()
+LE_beta = sp.diff(L, beta) - sp.diff(sp.diff(L, beta_dot)).simplify()
+LE_gamma = sp.diff(L, gamma) - sp.diff(sp.diff(L, gamma_dot)).simplify()
+sols = sp.solve([LE_x, LE_y, LE_z, LE_alpha, LE_beta, LE_gamma], (x_ddot, y_ddot, z_ddot, alpha_ddot, beta_ddot, gamma_ddot), simplify=False, rational=False)
+# lagrange_eqns = [sp.diff(L, q[i]) - sp.diff(sp.diff(L, q_dot[i]), t).simplify() for i in range(len(q))]
+# sols = sp.solve(lagrange_eqns, q_ddot)
 
-lagrange_eqns = [sp.diff(sp.diff(L, q_dot[i]).expand(), t) - sp.diff(L, q[i]).expand() for i in range(len(q))]
-sols = sp.solve(lagrange_eqns, q_ddot)
+# for eq in lagrange_eqns:
+#     with open("lagrange_eqns.txt", "a") as file:
+#         file.write(str(eq) + "\n\n")
+
+for i, (key, value) in enumerate(sols.items()):
+    with open(f"solution_{key}.txt", "w") as file:
+        file.write(str(value))
 
 # print(lagrange_eqns)
 # latex_eqns = [sp.latex(eq) for eq in lagrange_eqns]
@@ -141,30 +155,31 @@ sols = sp.solve(lagrange_eqns, q_ddot)
 #         pprint(f"{key}: {sols[key]}")
 
 
-a_x = sp.lambdify([t, g, m, k, l_0, q, q_dot], sols[x_ddot])
-a_y = sp.lambdify([t, g, m, k, l_0, q, q_dot], sols[y_ddot])
-a_z = sp.lambdify([t, g, m, k, l_0, q, q_dot], sols[z_ddot])
+
 a_alpha = sp.lambdify([t, g, m, k, l_0, q, q_dot], sols[alpha_ddot])
 a_beta = sp.lambdify([t, g, m, k, l_0, q, q_dot], sols[beta_ddot])
 a_gamma = sp.lambdify([t, g, m, k, l_0, q, q_dot], sols[gamma_ddot])
-v_x = sp.lambdify(x_dot, x_dot)
-v_y = sp.lambdify(y_dot, y_dot)
-v_z = sp.lambdify(z_dot, z_dot)
 v_alpha = sp.lambdify(alpha_dot, alpha_dot)
 v_beta = sp.lambdify(beta_dot, beta_dot)
 v_gamma = sp.lambdify(gamma_dot, gamma_dot)
+a_x = sp.lambdify([t, g, m, k, l_0, q, q_dot], sols[x_ddot])
+a_y = sp.lambdify([t, g, m, k, l_0, q, q_dot], sols[y_ddot])
+a_z = sp.lambdify([t, g, m, k, l_0, q, q_dot], sols[z_ddot])
+v_x = sp.lambdify(x_dot, x_dot)
+v_y = sp.lambdify(y_dot, y_dot)
+v_z = sp.lambdify(z_dot, z_dot)
 # print(sols)
 
 
 def f(t, y, g, m, k, l_0):
     q = y[:6]
     q_dot = y[6:]
-    return [v_x(a_x(t, g, m, k, l_0, q, q_dot)),
-             v_y(a_y(t, g, m, k, l_0, q, q_dot)), 
-             v_z(a_z(t, g, m, k, l_0, q, q_dot)), 
-             v_alpha(a_alpha(t, g, m, k, l_0, q, q_dot)), 
-             v_beta(a_beta(t, g, m, k, l_0, q, q_dot)), 
-             v_gamma(a_gamma(t, g, m, k, l_0, q, q_dot)),
+    return [v_x(q_dot[0]), 
+             v_y(q_dot[1]), 
+             v_z(q_dot[2]), 
+             v_alpha(q_dot[3]), 
+             v_beta(q_dot[4]), 
+             v_gamma(q_dot[5]),
              a_x(t, g, m, k, l_0, q, q_dot),
              a_y(t, g, m, k, l_0, q, q_dot),
              a_z(t, g, m, k, l_0, q, q_dot),
@@ -172,8 +187,8 @@ def f(t, y, g, m, k, l_0):
              a_beta(t, g, m, k, l_0, q, q_dot),
              a_gamma(t, g, m, k, l_0, q, q_dot)]
 
-t_span = [0, 20]
-t_eval = np.linspace(*t_span, 100)
+t_span = [0, 5]
+t_eval = np.linspace(*t_span, 1000)
 
 q_ic = np.array([-40, -40, 20, 5, 0, 0])
 q_dot_ic = np.array([0, 0, 0, 0, 0, 0])
@@ -186,43 +201,44 @@ initial_conditions = np.concatenate([q_ic, q_dot_ic])
 
 
 
-sol = solve_ivp(f, t_span, initial_conditions, args=(g, m, k, l_0), t_eval=t_eval, method='Radau')
+ans = solve_ivp(f, t_span, initial_conditions, args=(g, m, k, l_0), t_eval=t_eval, method='Radau')
 
-np.savetxt("results.csv", sol.y.T, delimiter=",")
-print(sol)
+np.savetxt("results.csv", ans.y.T, delimiter=",")
+# print(sol)
 fig = plt.figure()
-plt.plot(sol.t, sol.y[0], label='x')
+# plt.plot(sol.t, sol.y[0], label='x')
 # Create a 3D axis
-# ax = fig.add_subplot(111, projection='3d')
+ax = fig.add_subplot(111, projection='3d')
 
-# # Set labels
-# ax.set_xlabel('X')
-# ax.set_ylabel('Y')
-# ax.set_zlabel('Z')
-# ax.set_xlim([-100, 100])
-# ax.set_ylim([-100, 100])
-# ax.set_zlim([-100, 100])
+# Set labels
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.set_xlim([-100, 100])
+ax.set_ylim([-100, 100])
+ax.set_zlim([-100, 100])
 
-# ax.scatter(ans[:, 0], ans[:, 1], ans[:, 2])
+# ax.plot(ans.y[:, 0], ans.y[:, 1], ans.y[:, 2])
 
-# point, = ax.plot([ans[0, 0]], [ans[0, 1]], [ans[0, 2]], 'o')
+point, = ax.plot([ans.y[0, 0]], [ans.y[0, 1]], [ans.y[0, 2]], 'o')
 
-# # Update function for animation
-# def update(num, ans, point):
-#     point.set_data(list(ans[num, 0:2]))
-#     point.set_3d_properties(ans[num, 2])
+# Update function for animation
+def update(num, ans, point):
+    point.set_data(list(ans.y[num, 0:2]))
+    point.set_3d_properties(ans.y[num, 2])
     
-#     # Remove previous text
-#     if hasattr(update, 'txt'):
-#         update.txt.remove()
+    # Remove previous text
+    if hasattr(update, 'txt'):
+        update.txt.remove()
     
-#     # Add text
-#     update.txt = ax.text(0, 0, 0, f'x={ans[num, 0]:.2f}, y={ans[num, 1]:.2f}, z={ans[num, 2]:.2f}, vx={ans[num, 6]:.2f}, vy={ans[num, 7]:.2f}, vz={ans[num, 8]:.2f}', color='black')
+    # Add text
+    update.txt = ax.text(0, 0, 0, f'x={ans.y[num, 0]:.2f}, y={ans.y[num, 1]:.2f}, z={ans.y[num, 2]:.2f}, vx={ans.y[num, 6]:.2f}, vy={ans.y[num, 7]:.2f}, vz={ans.y[num, 8]:.2f}', color='black')
 
-# # Create animation
-# ani = animation.FuncAnimation(fig, update, frames=len(ans), fargs=(ans, point))
+fps = ans.y.shape[0] / (t_span[1] - t_span[0])
 
-# # Save as gif
-# ani.save('trajectory.gif', writer='pillow')
+ani = animation.FuncAnimation(fig, update, frames=ans.y.shape[0], fargs=(ans, point))
 
+# Save as gif
+ani.save('trajectory.mp4', writer='ffmpeg', fps=fps)
+ani.save('trajectory.gif', writer='pillow', fps=fps)
 plt.show()

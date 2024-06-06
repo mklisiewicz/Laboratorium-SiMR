@@ -1,9 +1,0 @@
--rootPath
-C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI
--cmake-output
--output-file
-C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build/.qt/qml_imports/LabGUI_conf.cmake
--importPath
-C:/Users/mmate/SiMR/Laboratorium-SiMR/LabGUI/build
--importPath
-C:/Qt/6.7.1/msvc2019_64/./qml

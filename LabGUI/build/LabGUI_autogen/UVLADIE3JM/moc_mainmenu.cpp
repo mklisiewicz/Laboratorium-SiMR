@@ -38,8 +38,7 @@ constexpr auto qt_meta_stringdata_CLASSMainMenuENDCLASS = QtMocHelpers::stringDa
     "MainMenu",
     "widgetSelected",
     "",
-    "QWidget*",
-    "widget",
+    "widgetIndex",
     "toggleSubMenu",
     "index",
     "clearButtonSelection",
@@ -67,15 +66,15 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainMenuENDCLASS[] = {
        1,    1,   32,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    1,   35,    2, 0x08,    3 /* Private */,
-       7,    1,   38,    2, 0x08,    5 /* Private */,
+       4,    1,   35,    2, 0x08,    3 /* Private */,
+       6,    1,   38,    2, 0x08,    5 /* Private */,
 
  // signals: parameters
-    QMetaType::Void, 0x80000000 | 3,    4,
+    QMetaType::Void, QMetaType::Int,    3,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int,    6,
-    QMetaType::Void, QMetaType::Int,    8,
+    QMetaType::Void, QMetaType::Int,    5,
+    QMetaType::Void, QMetaType::Int,    7,
 
        0        // eod
 };
@@ -91,7 +90,7 @@ Q_CONSTINIT const QMetaObject MainMenu::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<MainMenu, std::true_type>,
         // method 'widgetSelected'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QWidget *, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'toggleSubMenu'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
@@ -108,26 +107,15 @@ void MainMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         auto *_t = static_cast<MainMenu *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->widgetSelected((*reinterpret_cast< std::add_pointer_t<QWidget*>>(_a[1]))); break;
+        case 0: _t->widgetSelected((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 1: _t->toggleSubMenu((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 2: _t->clearButtonSelection((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        switch (_id) {
-        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
-        case 0:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
-            case 0:
-                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QWidget* >(); break;
-            }
-            break;
-        }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (MainMenu::*)(QWidget * );
+            using _t = void (MainMenu::*)(int );
             if (_t _q_method = &MainMenu::widgetSelected; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
@@ -160,14 +148,14 @@ int MainMenu::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 3)
-            qt_static_metacall(this, _c, _id, _a);
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 3;
     }
     return _id;
 }
 
 // SIGNAL 0
-void MainMenu::widgetSelected(QWidget * _t1)
+void MainMenu::widgetSelected(int _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

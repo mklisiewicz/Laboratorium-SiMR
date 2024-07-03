@@ -22,7 +22,7 @@ MainMenu::MainMenu(QWidget *parent) : QWidget(parent), currentMenu(nullptr) {
         button->setFlat(true);
         button->setCheckable(true);
         button->setStyleSheet("QPushButton { border: none; background-color: transparent; }"
-                              "QPushButton:pressed { background-color: #003965; }"
+                              "QPushButton:pressed { background-color: transparent; }"
                               "QPushButton:checked { background-color: #003965; }");
 
         layout->insertWidget(layout->count() - 1, button); // Insert before the stretch
@@ -42,7 +42,7 @@ MainMenu::MainMenu(QWidget *parent) : QWidget(parent), currentMenu(nullptr) {
         });
 
         // Connect SubMenu's widgetSelected signal to MainMenu's widgetSelected signal
-        connect(subMenu, &SubMenu::widgetSelected, this, &MainMenu::widgetSelected);
+        connect(subMenu, &SubMenu::buttonClicked, this, &MainMenu::widgetSelected);
     }
 
     setLayout(layout);
@@ -61,19 +61,25 @@ MainMenu::MainMenu(QWidget *parent) : QWidget(parent), currentMenu(nullptr) {
 
 void MainMenu::enterEvent(QEnterEvent *event) {
     expandAnimation->start();
+    if (currentMenu)
+        currentMenu->toggleSubMenu();
     QWidget::enterEvent(event);
 }
 
 void MainMenu::leaveEvent(QEvent *event) {
     collapseAnimation->start();
+    if (currentMenu)
+        currentMenu->collapseSubMenu();
     QWidget::leaveEvent(event);
 }
 
 void MainMenu::toggleSubMenu(int index) {
     if (currentMenu && currentMenu != subMenus[index]) {
         currentMenu->collapseSubMenu();
+        currentMenu->clearButtonSelection(-1);
     }
     currentMenu = subMenus[index]->expanded ? nullptr : subMenus[index];
+    
     subMenus[index]->toggleSubMenu();
 }
 

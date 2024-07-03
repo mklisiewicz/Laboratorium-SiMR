@@ -31,7 +31,7 @@ public:
 private slots:
     void createMenu();
     void onActionTriggered();
-    void changeInterfaceWidget(QWidget *widget);
+    void changeInterfaceWidget(int widgetIndex);
 
 private:
     MainMenu *menu;

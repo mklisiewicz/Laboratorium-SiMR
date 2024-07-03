@@ -11,7 +11,7 @@ BaseInterfaceWidget::BaseInterfaceWidget(QWidget *parent) : QWidget(parent)
     mainLayout->addWidget(tabWidget);
 
     // Create tabs for simulation and measurement parts
-    simulationWidget = new QWidget(this);
+    simulationWidget = new interface(this);
     measurementWidget = new QWidget(this);
     tabWidget->addTab(simulationWidget, "Simulation");
     tabWidget->addTab(measurementWidget, "Measurement");

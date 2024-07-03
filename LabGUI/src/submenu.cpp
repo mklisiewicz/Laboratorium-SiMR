@@ -11,11 +11,18 @@ SubMenu::SubMenu(int menuIndex, QWidget *parent) : QWidget(parent), expanded(fal
         
         button->setMinimumHeight(20);
         button->setFlat(true);
+        button->setCheckable(true);
         button->setStyleSheet("QPushButton { border: none; background-color: transparent; }"
-                              "QPushButton:pressed { background-color: lightgray; }");
-
+                              "QPushButton:pressed { background-color: transparent; }"
+                              "QPushButton:checked { background-color: #003965; }");
+        
         layout->addWidget(button);
         subButtons.append(button);
+
+        connect(button, &QPushButton::clicked, this, [this, i, menuIndex]() {
+            clearButtonSelection(i);
+            emit buttonClicked(menuIndex*10+i);
+        });
     }
 
     setLayout(layout);
@@ -45,6 +52,14 @@ void SubMenu::toggleSubMenu() {
         expandAnimation->start();
     }
     expanded = !expanded;
+}
+
+void SubMenu::clearButtonSelection(int indexToSkip) {
+    for (int j = 0; j < subButtons.size(); ++j) {
+        if (j != indexToSkip) {
+            subButtons[j]->setChecked(false);
+        }
+    }
 }
 
 void SubMenu::collapseSubMenu() {

@@ -11,7 +11,7 @@ class SubMenu : public QWidget {
 
 public:
     explicit SubMenu(int menuIndex, QWidget *parent = nullptr);
-
+    void clearButtonSelection(int indexToSkip);
     void toggleSubMenu();
     void collapseSubMenu();
 
@@ -19,7 +19,7 @@ public:
 
 signals:
     void widgetSelected(QWidget *widget);
-    
+    void buttonClicked(int buttonIndex);
 private:
     QVBoxLayout *layout;
     QList<QPushButton*> subButtons;

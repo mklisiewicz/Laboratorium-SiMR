@@ -14,7 +14,7 @@ public:
     explicit MainMenu(QWidget *parent = nullptr);
 
 signals:
-    void widgetSelected(QWidget *widget); // Signal emitted when a widget is selected
+    void widgetSelected(int widgetIndex); // Signal emitted when a widget is selected
 
 protected:
     void enterEvent(QEnterEvent *event) override;

@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QHBoxLayout>
 #include <QTabWidget>
+#include "interface.h"
 
 class BaseInterfaceWidget : public QWidget
 {

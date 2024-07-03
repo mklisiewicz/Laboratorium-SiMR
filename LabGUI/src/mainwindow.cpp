@@ -8,8 +8,9 @@ MainWindow::MainWindow(QWidget *parent)
     
 
     menu = new MainMenu(this);
+    connect(menu, &MainMenu::widgetSelected, this, &MainWindow::changeInterfaceWidget);
     placeholderWidget = new BaseInterfaceWidget(this);
-    // interfacehuj = new interface(this);
+
     mainLayout->addWidget(menu);
     mainLayout->addWidget(placeholderWidget);
 
@@ -58,19 +59,19 @@ void MainWindow::onActionTriggered() {
 }
 
 
-void MainWindow::changeInterfaceWidget(QWidget *widget) {
+void MainWindow::changeInterfaceWidget(int widgetIndex) {
     QLayoutItem *child;
     while ((child = placeholderWidget->layout()->takeAt(0)) != nullptr) {
         delete child->widget();
         delete child;
     }
-
-    if (widget != nullptr) {
-        QVBoxLayout *layout = new QVBoxLayout(placeholderWidget);
-        layout->addWidget(widget);
-        placeholderWidget->setLayout(layout);
-        placeholderWidget->show();
-    } else {
-        placeholderWidget->hide();
-    }
+    std::cout << widgetIndex;
+    // if (widget != nullptr) {
+    //     QVBoxLayout *layout = new QVBoxLayout(placeholderWidget);
+    //     layout->addWidget(widget);
+    //     placeholderWidget->setLayout(layout);
+    //     placeholderWidget->show();
+    // } else {
+    //     placeholderWidget->hide();
+    // }
 }
